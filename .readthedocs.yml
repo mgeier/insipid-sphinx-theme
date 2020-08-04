@@ -9,6 +9,7 @@ build:
     install:
       - pip install --upgrade pip
       - pip install --group doc .
+      - pip install readthedocs-sphinx-search
 submodules:
   include: all
 sphinx:

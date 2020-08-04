@@ -132,6 +132,7 @@ html_secnumber_suffix = '\N{FIGURE SPACE}'
 # -- Sphinx extensions --------------------------------------------------------
 
 extensions = [
+    'sphinx_search.extension',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
