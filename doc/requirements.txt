@@ -1,1 +1,2 @@
+readthedocs-sphinx-search
 sphinx-last-updated-by-git
