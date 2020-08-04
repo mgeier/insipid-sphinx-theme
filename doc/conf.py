@@ -43,7 +43,7 @@ html_theme_options = {
     #'right_buttons': [
     #    'search-button.html',
     #],
-    #'rightsidebar': True,
+    'rightsidebar': True,
     #'show_insipid': False,
     #'sidebar_overlay_width': None,
     #'sidebar_transition': '1s ease-out',
