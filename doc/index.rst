@@ -82,5 +82,5 @@
 
         On *touch-enabled* devices:
         Tap at the top of the page to show the topbar (if it was scrolled away);
-        swipe from the left edge to show the sidebar,
-        swipe towards the left to hide it.
+        swipe from the right edge to show the sidebar,
+        swipe towards the right to hide it.
