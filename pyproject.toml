@@ -35,7 +35,7 @@ Issues = "https://github.com/mgeier/insipid-sphinx-theme/issues"
 [dependency-groups]
 dev = [{ include-group = "test" }, { include-group = "doc" }]
 test = []
-doc = ["sphinx-last-updated-by-git"]
+doc = ["sphinx-last-updated-by-git", "readthedocs-sphinx-search"]
 
 [tool.setuptools.dynamic]
 version = {attr = "insipid_sphinx_theme.__version__"}
