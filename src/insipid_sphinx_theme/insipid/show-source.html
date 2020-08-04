@@ -1,0 +1,19 @@
+{# To be used in footer.html #}
+{#- NB: "sourcename" is set to the empty string if html_copy_source is False, but it is undefined if there is no source file! #}
+{%- if show_source and sourcename is defined %}
+{%- if has_source %}
+{%- if sourcename == '' %}
+{#- No source link. This may happen in the "singlehtml" builder. #}
+{%- else %}
+<a class="reference internal" href="{{ pathto('_sources/' + sourcename, 1)|e }}" rel="nofollow">{{ _('Show Source') }}</a>.
+{%- endif %}
+{%- elif page_source_suffix is not defined %}
+{#- No source link. This may happen in the "singlehtml" builder. #}
+{%- elif display_bitbucket|tobool and bitbucket_user and bitbucket_repo and commit and conf_py_path %}
+<a class="reference external" href="https://bitbucket.org/{{ bitbucket_user }}/{{ bitbucket_repo }}/src/{{ commit }}{{ conf_py_path|e }}{{ pagename|e + page_source_suffix }}" rel="nofollow">{{ _('Show Source') }} (Bitbucket)</a>.
+{%- elif display_github|tobool and github_user and github_repo and commit and conf_py_path %}
+<a class="reference external" href="https://github.com/{{ github_user }}/{{ github_repo }}/blob/{{ commit }}{{ conf_py_path|e }}{{ pagename|e + page_source_suffix }}" rel="nofollow">{{ _('Show Source') }} (Github)</a>.
+{%- elif display_gitlab|tobool and gitlab_user and gitlab_repo and commit and conf_py_path %}
+<a class="reference external" href="https://gitlab.com/{{ gitlab_user }}/{{ gitlab_repo }}/blob/{{ commit }}{{ conf_py_path|e }}{{ pagename|e + page_source_suffix }}" rel="nofollow">{{ _('Show Source') }} (GitLab)</a>.
+{%- endif %}
+{%- endif %}

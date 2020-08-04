@@ -1,0 +1,6 @@
+{# NB: "title" and some ARIA attributes are set via JavaScript. #}
+{%- if render_sidebar %}
+            <button id="sidebar-button" type="button" aria-controls="sphinxsidebar" accesskey="M">
+              {% include 'icons/menu.svg' %}
+            </button>
+{%- endif %}

@@ -1,0 +1,4 @@
+/build/
+/dist/
+/src/insipid_sphinx_theme.egg-info/
+__pycache__/

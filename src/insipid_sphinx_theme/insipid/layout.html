@@ -1,0 +1,228 @@
+{%- extends "basic/layout.html" %}
+
+
+{# Turn comma-separated list into proper list #}
+{% if theme_left_buttons is string and theme_left_buttons %}
+{% set theme_left_buttons = theme_left_buttons.split(',')|map('trim') %}
+{% endif %}
+{% if theme_right_buttons is string and theme_right_buttons %}
+{% set theme_right_buttons = theme_right_buttons.split(',')|map('trim') %}
+{% endif %}
+
+
+{% macro stripsectionnumber(title) %}
+{%- if title.startswith('<span class="section-number">') %}
+{{- title.split('</span>', 1)|last }}
+{%- else %}
+{{- title }}
+{%- endif %}
+{%- endmacro %}
+
+
+{# Remove section numbers from title/next/previous/up/breadcrumbs links #}
+{% if theme_strip_section_numbers %}
+{% set title = stripsectionnumber(title) %}
+{% if next %}
+{% set next = namespace(next) %}
+{% set next.title = stripsectionnumber(next.title) %}
+{% endif %}
+{% if prev %}
+{% set prev = namespace(prev) %}
+{% set prev.title = stripsectionnumber(prev.title) %}
+{% endif %}
+{% set new_parents = [] %}
+{% for parent in parents %}
+{% set parent = namespace(parent) %}
+{% set parent.title = stripsectionnumber(parent.title) %}
+{# Dummy assignment to be able to call append() #}
+{% set _dummy = new_parents.append(parent) %}
+{% endfor %}
+{% set parents = new_parents %}
+{% endif %}
+
+
+{% if sidebars and 'ethical-ad.html' not in sidebars %}
+{# Dummy assignment to be able to call append() #}
+{% set _dummy = sidebars.append('ethical-ad.html') %}
+{% endif %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{{ pathto('_static/basic.css', 1) }}" type="text/css" />
+{{- super() }}
+{%- if READTHEDOCS|tobool and render_sidebar %}
+    <link rel="stylesheet" href="{{ pathto('_static/insipid-sidebar-readthedocs.css', 1) }}" type="text/css" />
+{%- endif %}
+{%- endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+    <script defer src="{{ pathto('_static/insipid.js', 1) }}"></script>
+{%- if render_sidebar %}
+    <script defer src="{{ pathto('_static/insipid-sidebar.js', 1) }}"></script>
+{%- endif %}
+{%- endblock %}
+
+
+{% block extrahead %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+{%- endblock %}
+
+
+{% block body_tag %}
+  <body{% if render_sidebar %} class="sidebar-visible"{% endif %}>
+{%- endblock %}
+
+
+{% block header %}
+    <script type="text/javascript">
+        (function() {
+            var $body = $(document.body);
+            $body.addClass('js');
+{%- if render_sidebar %}
+            $body.addClass('sidebar-resizing');  // avoid transitions on load
+            $body.removeClass('sidebar-visible');
+            try {
+                var sidebar = localStorage.getItem('sphinx-sidebar');
+                if (sidebar === 'visible') {
+                    $body.addClass('sidebar-visible');
+                }
+                var sidebar_width = localStorage.getItem('sphinx-sidebar-width');
+                if (sidebar_width) {
+                    $(':root').css('--sidebar-width', sidebar_width);
+                }
+            } catch(e) {
+            }
+{%- if pagename == "search" %}
+            // hide sidebar on narrow screen
+            if ($body.css('overflow') === 'hidden') {
+                $body.removeClass('sidebar-visible');
+            }
+{%- endif %}
+{%- endif %}
+        })();
+    </script>
+    <header id="topbar-placeholder">
+      <div id="topbar">
+        <div id="titlebar">
+          <div class="buttons">
+{%- if not theme_rightsidebar|tobool %}
+{%- include 'sidebar-button.html' %}
+{%- endif %}
+{%- for buttontemplate in theme_left_buttons %}
+{%- include buttontemplate %}
+{%- endfor %}
+          </div>
+          <div class="title">
+            {%- if parents %}
+            <a class="parent" href="{{ parents[-1].link|e }}" {{ accesskey('U') }}>{{ parents[-1].title }}</a>
+            {%- elif pagename == master_doc %}
+            {#- NB: In the "singlehtml" builder docstitle is None #}
+            <span class="parent">{{ docstitle|e if docstitle != None else title|e }}</span>
+            {%- else %}
+            <a class="parent" href="{{ pathto(master_doc)|e }}" {{ accesskey('U') }}>{{ docstitle|e }}</a>
+            {%- endif %}
+            <a class="top" href="#">{{ title }}</a>
+          </div>
+          <div class="buttons">
+{%- for buttontemplate in theme_right_buttons %}
+{%- include buttontemplate %}
+{%- endfor %}
+{%- if theme_rightsidebar|tobool %}
+{%- include 'sidebar-button.html' %}
+{%- endif %}
+          </div>
+        </div>
+{%- if pagename != "search" and 'searchbox.html' not in sidebars %}
+        <div id="searchbox" role="search">
+          <form id="search-form" class="search" style="display: none" action="{{ pathto('search') }}" method="get">
+            <input type="search" name="q" placeholder="{{ _('Search') + ' ...' }}" />
+            <button>{{ _('Go') }}</button>
+          </form>
+        </div>
+{%- endif %}
+      </div>
+    </header>
+{%- if theme_body_max_width != None %}
+    <nav>
+{%- if prev %}
+      <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ _('previous') }}:&#13;{{ prev.title|striptags|e }}" aria-label="{{ _('Previous topic') }}" {{ accesskey('P') }} tabindex="-1">
+        {% include 'icons/angle-left.svg' %}
+      </a>
+{%- endif %}
+{%- if next %}
+      <a href="{{ next.link|e }}" class="nav-icon next" title="{{ _('next') }}:&#13;{{ next.title|striptags|e }}" aria-label="{{ _('Next topic') }}" {{ accesskey('N') }} tabindex="-1">
+        {% include 'icons/angle-right.svg' %}
+      </a>
+{%- endif %}
+    </nav>
+{%- endif %}
+{%- endblock %}
+
+
+{% macro insipid_relbar() %}
+    <nav class="relbar">
+      {%- if prev %}
+      <a class="previous" href="{{ prev.link|e }}" aria-label="{{ _('Previous topic') }}" {{ accesskey('P') }}>
+        <div class="icon">
+          {% include 'icons/arrow-left.svg' %}
+        </div>
+        <div class="title">
+          <span class="text">
+            <span class="direction">{{ _('previous') }}</span>
+            {{ prev.title }}
+          </span>
+        </div>
+      </a>
+      {%- endif %}
+      {%- if next %}
+      <a class="next" href="{{ next.link|e }}" aria-label="{{ _('Next topic') }}" {{ accesskey('N') }}>
+        <div class="title">
+          <span class="text">
+            <span class="direction">{{ _('next') }}</span>
+            {{ next.title }}
+          </span>
+        </div>
+        <div class="icon">
+          {% include 'icons/arrow-right.svg' %}
+        </div>
+      </a>
+      {%- endif %}
+    </nav>
+{%- endmacro %}
+
+
+{% block relbar1 %}
+{{ insipid_relbar() }}
+{%- endblock %}
+
+
+{% block sidebar1 %}{% endblock %}
+
+
+{% block sidebar2 %}{% endblock %}
+
+
+{% block relbar2 %}
+{{ insipid_relbar() }}
+{%- endblock %}
+
+
+{% block footer %}
+{% block comments %}{% endblock %}
+{{ sidebar() }}
+{% include 'footer.html' %}
+{%- if render_sidebar %}
+    <div class="sidebar-resize-handle"></div>
+    <div id="overlay"></div>
+{%- endif %}
+{%- endblock %}
+
+
+{% block sidebarlogo %}
+{{ super() }}
+          <div class="sidebar-resize-handle"></div>
+{% endblock %}

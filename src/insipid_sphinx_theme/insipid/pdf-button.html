@@ -1,0 +1,7 @@
+{%- for type, url in downloads %}
+{%- if type == 'pdf' %}
+            <a href="{{ url }}" title="PDF">
+              {% include 'icons/pdf.svg' %}
+            </a>
+{%- endif %}
+{%- endfor %}

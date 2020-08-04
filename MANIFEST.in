@@ -1,0 +1,6 @@
+include LICENSE
+include *.rst
+include doc/conf.py
+include doc/requirements.txt
+recursive-include doc *.rst *.png *.ico *.svg
+recursive-include doc/_templates *.html

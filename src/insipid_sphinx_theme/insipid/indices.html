@@ -1,0 +1,12 @@
+{# To be used in html_sidebars #}
+<ul>
+  {%- for rellink in rellinks %}
+  {%- if rellink[0] == 'genindex' %}
+  <li class="toctree-l1"><a class="reference internal" href="{{ pathto('genindex') }}" accesskey="I">{{ _('General Index') }}</a></li>
+  {%- elif rellink[0] == 'modindex' %}
+  <li class="toctree-l1"><a class="reference internal" href="{{ pathto('modindex') }}">{{ _('Global Module Index') }}</a></li>
+  {%- elif rellink[0] == 'py-modindex' %}
+  <li class="toctree-l1"><a class="reference internal" href="{{ pathto('py-modindex') }}">{{ _('Python Module Index') }}</a></li>
+  {%- endif %}
+  {%- endfor %}
+</ul>

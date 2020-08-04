@@ -1,0 +1,15 @@
+{%- if display_bitbucket|tobool and bitbucket_user and bitbucket_repo %}
+            <a href="https://bitbucket.org/{{ bitbucket_user }}/{{ bitbucket_repo }}/" title="Bitbucket">
+              {% include 'icons/bitbucket.svg' %}
+            </a>
+{%- endif %}
+{%- if display_github|tobool and github_user and github_repo %}
+            <a href="https://github.com/{{ github_user }}/{{ github_repo }}/" title="Github">
+              {% include 'icons/github.svg' %}
+            </a>
+{%- endif %}
+{%- if display_gitlab|tobool and gitlab_user and gitlab_repo %}
+            <a href="https://gitlab.com/{{ gitlab_user }}/{{ gitlab_repo }}/" title="GitLab">
+              {% include 'icons/gitlab.svg' %}
+            </a>
+{%- endif %}

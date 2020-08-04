@@ -1,0 +1,5 @@
+{%- if pagename != "search" and 'searchbox.html' not in sidebars %}
+            <button id="search-button" type="button" title="{{ _('Search') }}" aria-label="{{ _('Search') }}" aria-expanded="false" aria-controls="search-form" accesskey="S">
+              {% include 'icons/search.svg' %}
+            </button>
+{%- endif %}
