@@ -211,8 +211,8 @@ $(document).ready(function () {
         const resizeObserver = new ResizeObserver(entries => {
             for (let entry of entries) {
                 let height;
-                if(entry.borderBoxSize) {
-                    height = entry.borderBoxSize.blockSize;
+                if (entry.borderBoxSize && entry.borderBoxSize.length > 0) {
+                    height = entry.borderBoxSize[0].blockSize;
                 } else {
                     height = entry.contentRect.height;
                 }
@@ -233,8 +233,8 @@ $(document).ready(function () {
                 const resizeObserver = new ResizeObserver(entries => {
                     for (let entry of entries) {
                         let height;
-                        if(entry.borderBoxSize) {
-                            height = entry.borderBoxSize.blockSize;
+                        if (entry.borderBoxSize && entry.borderBoxSize.length > 0) {
+                            height = entry.borderBoxSize[0].blockSize;
                         } else {
                             height = entry.contentRect.height;
                         }
