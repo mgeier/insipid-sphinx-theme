@@ -78,6 +78,7 @@ $(document).ready(function () {
             $search_form.show();
             $search_button.attr('aria-expanded', 'true');
             $search_form.find('input').focus();
+            $body.removeClass('topbar-folded');
         } else {
             $search_form.hide();
             $search_button.attr('aria-expanded', 'false');
