@@ -16,9 +16,10 @@ If you don't like this theme, no problem,
 Sphinx has several :ref:`builtin-themes` to choose from and
 you can find a large list of third-party Sphinx themes at
 https://sphinx-themes.org/.
-You can also search for Sphinx themes on PyPI__ and Github__.
+You can also search for Sphinx themes on PyPI__, GitLab__ and Github__.
 
 __ https://pypi.org/search/?c=Framework+::+Sphinx+::+Theme
+__ https://gitlab.com/explore?name=sphinx+theme
 __ https://github.com/search?q=sphinx+theme
 
 .. _Sphinx: https://www.sphinx-doc.org/
