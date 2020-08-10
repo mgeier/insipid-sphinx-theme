@@ -19,6 +19,10 @@ body.js:not(.sidebar-visible) .injected .rst-versions.rst-badge {
     {{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }
 
+.injected .rst-versions.shift-up {
+    max-height: calc(100vh - var(--topbar-height));
+}
+
 .injected .rst-versions.rst-badge .rst-current-version {
     text-align: right;
 }

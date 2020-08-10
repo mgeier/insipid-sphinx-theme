@@ -70,6 +70,24 @@ div.sphinxsidebar {
     scrollbar-width: thin;
 }
 
+{%- if READTHEDOCS|tobool %}
+.injected .rst-versions.shift-up {
+    max-height: calc(100vh - var(--topbar-height) - 50px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+}
+
+.rst-versions.shift-up .rst-current-version {
+    position: sticky;
+    top: 0;
+}
+
+.rst-versions .rst-other-versions::-webkit-scrollbar {
+    width: 5px;
+}
+{%- endif %}
+
 /* -- body styles ----------------------------------------------------------- */
 
 strong {
