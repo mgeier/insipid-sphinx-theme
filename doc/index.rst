@@ -11,6 +11,8 @@
     usage
     configuration
     customization
+    contributing
+    version-history
 
     Git Repository <https://github.com/mgeier/insipid-sphinx-theme/>
 
