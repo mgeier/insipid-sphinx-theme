@@ -12,7 +12,7 @@ The following pages try to show all HTML constucts that can be created with
 Sphinx.
 
 If you notice that something is missing, please create a bug report at
-https://github.com/mgeier/inspipid-sphinx-theme/issues/!
+https://github.com/mgeier/insipid-sphinx-theme/issues/!
 
 
 Further Showcases
