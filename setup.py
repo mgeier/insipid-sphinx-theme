@@ -24,6 +24,7 @@ setup(
     python_requires='>=3.6',
     install_requires=[
         'sphinx>=3.1.2',
+        'jinja2>=2.11',  # suport for pathlib.Path
     ],
     author='Matthias Geier',
     author_email='Matthias.Geier@gmail.com',
