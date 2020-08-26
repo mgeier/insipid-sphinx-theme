@@ -563,12 +563,12 @@ div.body dl.exception > dt:not(:target) {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 200;
 }
 
 .relbar .title .text {
-    line-height: 2em;
+    line-height: 2.1em;
 }
 
 .relbar .title .text .direction {
@@ -576,7 +576,7 @@ div.body dl.exception > dt:not(:target) {
     right: 0;
     left: 0;
     top: 0;
-    font-size: 50%;
+    font-size: 60%;
     line-height: 0.5em;
 }
 
@@ -931,7 +931,7 @@ body:not(.js) #search-button {
 
 #titlebar .title {
     font-weight: 200;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-align: center;
     margin: 0;
     flex: 1;
