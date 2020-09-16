@@ -4,7 +4,7 @@ Basic Formatting
 Paragraphs
 ----------
 
-http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#paragraphs
+https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis
