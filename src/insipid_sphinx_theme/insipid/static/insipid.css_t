@@ -178,15 +178,11 @@ strong:target {
 div.body dl > dt:target,
 div.body div.admonition dl > dt:target,
 div.body div.topic dl > dt:target,
+div.body div.sidebar dl > dt:target,
 div.body div.sidebar .sidebar-title a:target,
 div.body a:target,
 strong:target {
-    background-color: #fff7c7;
-}
-
-div.body div.sidebar dl > dt:target,
-div.body div.sidebar a:target {
-    background-color: #ffee8e;
+    background-color: #fbe54e;
 }
 
 hr.docutils {
@@ -220,7 +216,7 @@ img {
 /* -- hyperlink styles ------------------------------------------------------ */
 
 a {
-    color: #0e84b5;
+    color: #1863b5;
     text-decoration: none;
     overflow-wrap: break-word;
 }
@@ -230,12 +226,12 @@ a:hover {
 }
 
 a:visited {
-    color: #235388;
+    color: #004188;
 }
 
 a.external {
     text-decoration: none;
-    border-bottom: 1px dotted #0e84b5;
+    border-bottom: 1px dotted #1863b5;
 }
 
 a.external:hover {
@@ -245,7 +241,7 @@ a.external:hover {
 
 a.external:visited {
     text-decoration: none;
-    border-bottom: 1px dotted #235388;
+    border-bottom: 1px dotted #004188;
 }
 
 /* -- code formatting ------------------------------------------------------- */
@@ -322,6 +318,7 @@ div.sidebar > p.sidebar-title {
     padding: 4px 7px;
     font-weight: normal;
     font-size: unset;
+    color: #333;
 }
 
 div.admonition > p.admonition-title + *,
@@ -335,12 +332,11 @@ div.admonition > :first-child:not(.admonition-title) {
 }
 
 div.admonition {
-    background-color: #bed7f2;
+    background-color: #e4ebf2;
 }
 
 div.admonition > p.admonition-title {
-    color: #fff;
-    background-color: #75b1e4;
+    background-color: #cadcea;
 }
 
 div.admonition.attention,
@@ -348,7 +344,7 @@ div.admonition.caution,
 div.admonition.danger,
 div.admonition.error,
 div.admonition.warning {
-    background-color: #fbdfc4;
+    background-color: #fbe7d4;
 }
 
 div.admonition.attention > p.admonition-title,
@@ -356,29 +352,25 @@ div.admonition.caution > p.admonition-title,
 div.admonition.danger > p.admonition-title,
 div.admonition.error > p.admonition-title,
 div.admonition.warning > p.admonition-title {
-    background-color: #f1bf8b;
+    background-color: #f0d5b8;
 }
 
 div.topic {
-    color: unset;
-    background-color: #eee;
+    background-color: #fff0eb;
 }
 
 div.topic > p.topic-title {
-    color: #333;
-    background-color: #ccc;
+    background-color: #f0dbd4;
 }
 
 div.sidebar,
 div.admonition.seealso {
-    color: unset;
-    background-color: #fff7c7;
+    background-color: #f4f4f4;
 }
 
 div.sidebar > p.sidebar-title,
 div.admonition.seealso > p.admonition-title {
-    color: #333;
-    background-color: #ffee8e;
+    background-color: #e4e4e4;
 }
 
 div.admonition.seealso {
@@ -516,11 +508,11 @@ div.body dl.concept > dt:not(:target),
 div.body dl.enum > dt:not(:target),
 div.body dl.enum-class > dt:not(:target),
 div.body dl.union > dt:not(:target) {
-    background-color: #bed7f2;
+    background-color: #e4ebf2;
 }
 
 div.body dl.exception > dt:not(:target) {
-    background-color: #fbdfc4;
+    background-color: #fbe7d4;
 }
 
 /* -- relbar ---------------------------------------------------------------- */
@@ -747,7 +739,7 @@ div.sphinxsidebar ul ul {
 }
 
 div.sphinxsidebar a {
-    color: #235388;
+    color: #004188;
 }
 
 div.sphinxsidebar code {
@@ -1057,8 +1049,7 @@ body.js:not(.sidebar-resizing) .nav-icon.previous {
 div.viewcode-block:target {
     margin: -0.5em;
     padding: 0.5em;
-
-    background-color: #fff7c7;
+    background-color: #ffffcc;
 }
 
 /* -- media queries --------------------------------------------------------- */
