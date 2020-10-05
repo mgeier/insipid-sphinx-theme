@@ -123,21 +123,33 @@ And some more:
 .. admonition:: :doc:`Admonition <admonitions>` title
     with footnote [#admonition-title]_
 
-    Footnote [*]_ in admonition text.
+    Footnote [*]_ in ``admonition`` text.
 
     .. [*] This is probably not used very often.
     .. [#admonition-title] This probably even less.
 
+.. warning::
+
+    Footnote [*]_ in ``warning`` text.
+
+    .. [*] See above.
+
+.. seealso::
+
+    Footnote [*]_ in ``seealso`` text.
+
+    .. [*] See above.
+
 .. topic:: :ref:`Topic` title with footnote [#topic-title]_
 
-    Footnote [*]_ in topic text.
+    Footnote [*]_ in ``topic`` text.
 
     .. [*] See above.
     .. [#topic-title] See above.
 
 .. sidebar:: :ref:`Sidebar` title with footnote [#sidebar-title]_
 
-    Footnote [*]_ in sidebar text.
+    Footnote [*]_ in ``sidebar`` text.
 
     .. [*] See above.
     .. [#sidebar-title] See above.
