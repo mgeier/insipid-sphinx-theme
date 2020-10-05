@@ -107,6 +107,14 @@ Text after second ``sidebar`` directive.
 
     Text.
 
+.. sidebar:: One More Sidebar
+
+    Text.
+
+.. warning::
+
+    Warning after ``sidebar``.
+
 .. sidebar:: And Another Sidebar
 
     Text.
