@@ -176,6 +176,30 @@ Nesting
         Topic within admonition is not allowed!
         Topic within topic neither!
 
+.. topic:: Topic
+
+    .. warning::
+
+        Deep nesting ahead:
+
+        .. seealso::
+
+            Note
+                .. note::
+
+                    You shouldn't use such deep nesting.
+
+            Warning
+                .. warning::
+
+                    Really!
+
+.. topic:: Topic
+
+    .. seealso::
+
+        Text.
+
 .. sidebar:: Sidebar
 
     .. note::
