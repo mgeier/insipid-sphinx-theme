@@ -219,14 +219,16 @@ Similarly, you can add further custom CSS files, if you want.
     But this will increase the load time of the HTML pages!
 
 If you want to use custom JavaScript files,
-store them in the :file:`static` sub-directory and add something like this
-to your :file:`layout.html` template:
+store them in the :file:`static` sub-directory of your theme directory
+(they will automatically be copied into the :file:`_static` sub-directory
+of the HTML output directory)
+and add something like this to your :file:`layout.html` template:
 
 .. code-block:: html+jinja
 
     {% block scripts %}
     {{ super() }}
-        <script defer src="{{ pathto('_static/insipid.js', 1) }}"></script>
+        <script defer src="{{ pathto('_static/my-script.js', 1) }}"></script>
     {% endblock %}
 
 If you want your JavaScript code to be available during page load,
