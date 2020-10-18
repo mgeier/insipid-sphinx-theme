@@ -1,3 +1,10 @@
+Version 0.2.0 -- 2020-10-18 -- PyPI__ -- diff__
+ * Color scheme update: background colors are now lighter, duller
+   and most importantly more insipid
+
+__ https://pypi.org/project/insipid-sphinx-theme/0.2.0/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.1.2...0.2.0
+
 Version 0.1.2 -- 2020-09-02 -- PyPI__ -- diff__
  * Smaller text in titlebar and relbar
 
