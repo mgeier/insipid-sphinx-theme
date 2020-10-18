@@ -7,22 +7,12 @@ Installation and Usage
 
 #.  Install the Python package ``insipid-sphinx-theme``, e.g. with pip_::
 
-        python3 -m pip install insipid-sphinx-theme --user
+        python3 -m pip install insipid-sphinx-theme
 
     Depending on your Python installation,
     you may have to use ``python`` instead of ``python3``.
-    If you want to install the module system-wide for all users
-    (assuming you have the necessary rights),
-    you should drop the ``--user`` flag.
-    If you are using a `virtual environment`_,
-    you should also drop the ``--user`` flag
-    (otherwise you'll get an error like
-    ``ERROR: Can not perform a '--user' install.
-    User site-packages are not visible in this virtualenv.``).
     If you have installed the module already,
     you can use the ``--upgrade`` flag to get the newest release.
-    
-    .. _`virtual environment`: https://docs.python.org/3/tutorial/venv.html
 
 #.  Edit the :file:`conf.py` file
     (just create an empty file if it doesn't exist yet,

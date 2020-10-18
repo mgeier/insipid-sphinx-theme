@@ -15,7 +15,7 @@ newest development version (a.k.a. "master") from Github_::
 
    git clone https://github.com/mgeier/insipid-sphinx-theme.git --recursive
    cd insipid-sphinx-theme
-   python3 -m pip install -e . --user
+   python3 -m pip install -e .
 
 ... where ``-e`` stands for ``--editable``.
 
@@ -52,7 +52,7 @@ pages locally using Sphinx and check if they look OK.
 Initially, you might need to install a few packages that are needed to build the
 documentation::
 
-   python3 -m pip install -r doc/requirements.txt --user
+   python3 -m pip install -r doc/requirements.txt
 
 To (re-)build the HTML files, use::
 
