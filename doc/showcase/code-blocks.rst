@@ -85,6 +85,15 @@ No language:
     print('Hello,')
     print('world!')
 
+.. note::
+
+    There are problems with the style of line numbers when using Pygments 2.7+,
+    see https://github.com/sphinx-doc/sphinx/issues/8254.
+    Until this is fixed, you can pin your version of Pygments::
+
+        python3 -m pip install "pygments<2.7"
+
+
 ``:emphasize-lines:``
 
 .. code-block:: python

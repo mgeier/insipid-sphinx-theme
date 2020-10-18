@@ -107,6 +107,9 @@ html_secnumber_suffix = '\N{FIGURE SPACE}'
 # Generate domain indices, e.g. Python module index
 #html_domain_indices = False
 
+# This will be the default in Sphinx 4+
+#html_codeblock_linenos_style = 'inline'
+
 # -- Sphinx extensions --------------------------------------------------------
 
 extensions = [
