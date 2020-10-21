@@ -613,7 +613,7 @@ div.sphinxsidebar {
     overflow-y: auto;
     float: unset;
     margin-left: unset;  /* override basic.css */
-    z-index: 99;
+    z-index: 390;
     color: #333;
     background-color: #f5f5f5;
     overscroll-behavior: contain;
@@ -829,7 +829,7 @@ div.sphinxsidebar input {
 /* -- topbar ---------------------------------------------------------------- */
 
 #topbar-placeholder {
-    z-index: 123;
+    z-index: 500;
 }
 
 body.js #topbar-placeholder {
@@ -1077,7 +1077,7 @@ div.viewcode-block:target {
         opacity: 0;
         background-color: rgba(100%, 100%, 100%, 80%);
         transition: opacity {{ theme_sidebar_transition }}, visibility 0s {{ theme_sidebar_transition }};
-        z-index: 42;
+        z-index: 380;
     }
 
     body.js.sidebar-visible #overlay {
