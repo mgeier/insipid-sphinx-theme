@@ -293,6 +293,16 @@ div.code-block-caption {
     font-size: unset;
 }
 
+td.linenos .linenodiv pre {
+    color: #666;
+    background-color: transparent;
+    padding: 7px 0px;
+}
+
+table.highlighttable td.linenos {
+    padding-right: 0.5em;
+}
+
 /* highlighted line (:emphasize-lines:) */
 .highlight .hll {
     padding: 0 0.5em;
