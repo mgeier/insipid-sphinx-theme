@@ -1,3 +1,10 @@
+Version 0.2.1 -- 2020-10-23 -- PyPI__ -- diff__
+ * Fix line numbers for Pygments 2.7
+ * Use higher values for z-index
+
+__ https://pypi.org/project/insipid-sphinx-theme/0.2.1/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.2.0...0.2.1
+
 Version 0.2.0 -- 2020-10-18 -- PyPI__ -- diff__
  * Color scheme update: background colors are now lighter, duller
    and most importantly more insipid
