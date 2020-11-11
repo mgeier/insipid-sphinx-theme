@@ -551,6 +551,10 @@ div.body dl.exception > dt:not(:target) {
     text-align: right;
 }
 
+.relbar .icon {
+    color: #333;
+}
+
 .relbar .previous .icon {
     margin-right: 1em;
 }
