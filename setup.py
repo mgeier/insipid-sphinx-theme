@@ -31,7 +31,7 @@ setup(
     description='An insipid Sphinx theme',
     long_description=open('README.rst').read(),
     license='BSD-2-Clause',
-    keywords=''.split(),
+    keywords='mobile-friendly'.split(),
     url='https://insipid-sphinx-theme.readthedocs.io/',
     project_urls={
         'Documentation': 'https://insipid-sphinx-theme.readthedocs.io/',
