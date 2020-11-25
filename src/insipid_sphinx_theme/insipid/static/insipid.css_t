@@ -41,29 +41,30 @@ body.js * {
 
 /* -- scrollbars ------------------------------------------------------------ */
 
-::-webkit-scrollbar {
+html::-webkit-scrollbar, div.sphinxsidebar::-webkit-scrollbar {
+    width: 14px;
     background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb, div.sphinxsidebar::-webkit-scrollbar-thumb {
     background: #ccc;
 }
 
-html {
+html, div.sphinxsidebar {
     scrollbar-color: #ccc transparent;
 }
 
-div.body *::-webkit-scrollbar {
-    width: 5px;
-}
-
-div.body * {
-    scrollbar-width: thin;
+body {
+    scrollbar-color: initial;
 }
 
 div.sphinxsidebar::-webkit-scrollbar {
-    width: 5px;
-    background: #f5f5f5;
+    width: 7px;
+    background: transparent;
+}
+
+div.sphinxsidebar::-webkit-scrollbar-thumb {
+    background: #ccc;
 }
 
 div.sphinxsidebar {
@@ -76,6 +77,7 @@ div.sphinxsidebar {
     overflow-y: auto;
     overscroll-behavior: contain;
     scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
 }
 
 .rst-versions.shift-up .rst-current-version {
@@ -83,8 +85,13 @@ div.sphinxsidebar {
     top: 0;
 }
 
-.rst-versions .rst-other-versions::-webkit-scrollbar {
-    width: 5px;
+.injected .rst-versions.shift-up::-webkit-scrollbar {
+    width: 7px;
+    background: transparent;
+}
+
+.injected .rst-versions.shift-up::-webkit-scrollbar-thumb {
+    background: #ccc;
 }
 {%- endif %}
 
