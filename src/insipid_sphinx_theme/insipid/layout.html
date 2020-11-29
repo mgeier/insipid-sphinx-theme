@@ -212,7 +212,11 @@
 
 
 {% block footer %}
+{% if self.comments()|trim %}
+<div class="articleComments">
 {% block comments %}{% endblock %}
+</div>
+{% endif%}
 {{ sidebar() }}
 {% include 'footer.html' %}
 {%- if render_sidebar %}

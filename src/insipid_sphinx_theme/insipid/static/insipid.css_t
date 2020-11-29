@@ -617,10 +617,14 @@ nav.crumbs a:visited {
 
 footer {
     padding: 9px 0 9px 0;
-    border-top: #eee solid 1px;
     text-align: center;
     font-size: 75%;
     color: #333;
+}
+
+footer, div.articleComments {
+    border-top: #eee solid 1px;
+    background-color: #fff;
 }
 
 /* -- sidebar --------------------------------------------------------------- */
