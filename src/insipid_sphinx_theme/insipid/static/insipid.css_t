@@ -624,7 +624,6 @@ footer {
 
 footer, div.articleComments {
     border-top: #eee solid 1px;
-    background-color: #fff;
 }
 
 /* -- sidebar --------------------------------------------------------------- */
@@ -996,7 +995,7 @@ body.scrolled #titlebar .top {
 /* -- navigation icons ------------------------------------------------------ */
 
 /* cover nav-icon */
-div.body, .relbar, footer {
+div.body, .relbar, footer, div.articleComments {
     position: relative;
     background-color: #fff;
 }
