@@ -559,7 +559,7 @@ div.body dl.exception > dt:not(:target) {
 }
 
 .relbar .icon {
-    color: #333;
+    color: #888;
 }
 
 .relbar .previous .icon {
@@ -596,7 +596,7 @@ div.body dl.exception > dt:not(:target) {
 /* -- breadcrumbs ----------------------------------------------------------- */
 
 nav.crumbs {
-    color: #ccc;
+    color: #888;
     font-size: 90%;
 }
 
@@ -623,7 +623,7 @@ footer {
 }
 
 footer, div.articleComments {
-    border-top: #eee solid 1px;
+    border-top: #ccc solid 1px;
 }
 
 /* -- sidebar --------------------------------------------------------------- */
@@ -871,13 +871,16 @@ body.js:not(.sidebar-resizing) #topbar-placeholder {
 }
 
 #topbar {
-    border-bottom: #eee solid 1px;
+    border-bottom: #ccc solid 1px;
     background-color: #fff;
 }
 
 #topbar,
 #titlebar a,
-#titlebar a:visited,
+#titlebar a:visited {
+    color: #888;
+}
+
 .relbar,
 .relbar > a:hover .direction {
     color: #ccc;
@@ -885,7 +888,8 @@ body.js:not(.sidebar-resizing) #topbar-placeholder {
 
 #topbar button:hover,
 #titlebar a:hover,
-.relbar a:hover {
+.relbar a:hover,
+.relbar a:hover .icon {
     color: #333;
 }
 
