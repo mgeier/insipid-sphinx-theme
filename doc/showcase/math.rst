@@ -25,6 +25,10 @@ Another block:
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#the-math-domain
 
+
+Math in Section Title: :math:`e^{i\pi} + 1 = 0`
+-----------------------------------------------
+
 With label (since Sphinx 1.8):
 
 .. math:: e^{i\pi} + 1 = 0
