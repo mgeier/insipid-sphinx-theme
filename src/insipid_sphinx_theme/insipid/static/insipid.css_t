@@ -331,11 +331,18 @@ div.topic, div.sidebar {
 div.admonition > p.admonition-title,
 div.topic > p.topic-title,
 div.sidebar > p.sidebar-title {
-    margin: -7px -7px 7px -7px {% if not html5_doctype %}!important{% endif %};
+    margin: -7px -7px 7px -7px;
     padding: 4px 7px;
     font-weight: normal;
     font-size: unset;
     color: #333;
+}
+
+.first.admonition-title,
+.first.topic-title,
+.first.sidebar-title {
+    /* override basic.css, which uses !important */
+    margin-top: -7px !important;
 }
 
 div.admonition > p.admonition-title + *,
