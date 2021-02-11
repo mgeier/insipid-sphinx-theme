@@ -201,22 +201,22 @@ img {
     max-width: unset;
 }
 
-.compound {
+div.compound {
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-.compound-first {
+div.compound > .compound-first {
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
 }
 
-.compound-middle {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+div.compound > .compound-middle {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
 }
-.compound-last {
-    margin-top: 0.5em;
+div.compound > .compound-last {
+    margin-top: 0.2em;
     margin-bottom: 0;
 }
 
