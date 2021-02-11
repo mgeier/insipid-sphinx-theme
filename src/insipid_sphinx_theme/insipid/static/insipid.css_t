@@ -316,7 +316,7 @@ table.highlighttable td.linenos {
     margin: 0 -0.5em;
 }
 
-kbd.docutils {
+kbd.docutils:not(.compound) {
     padding: 0.15em;
     border-radius: 3px;
     border: 1px solid #333;
