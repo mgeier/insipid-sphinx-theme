@@ -1,3 +1,10 @@
+Version 0.2.3 -- 2021-02-14 -- PyPI__ -- diff__
+ * More contrast in topbar
+ * CSS fixes for comment background, ``:kbd:`` role, compound paragraphs
+
+__ https://pypi.org/project/insipid-sphinx-theme/0.2.3/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.2.2...0.2.3
+
 Version 0.2.2 -- 2020-12-19 -- PyPI__ -- diff__
  * improve comments styling
  * Apply scrollbar styling only to body and sidebar, not to inner scrollbars
