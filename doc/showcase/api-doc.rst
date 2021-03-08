@@ -380,7 +380,7 @@ Generic Objects
     Destroys the aforementioned object.
 
 
-``sphinx.ext.automodule``
+``sphinx.ext.autodoc``
 -------------------------
 
 A link: :func:`insipid_sphinx_theme.setup`.
