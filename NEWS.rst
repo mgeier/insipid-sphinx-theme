@@ -1,3 +1,10 @@
+Version 0.2.4 -- 2021-04-04 -- docs__ -- PyPI__ -- diff__
+ * Disallow docutils 0.17+ (temporarily)
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.2.4/
+__ https://pypi.org/project/insipid-sphinx-theme/0.2.4/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.2.3...0.2.4
+
 Version 0.2.3 -- 2021-02-14 -- docs__ -- PyPI__ -- diff__
  * More contrast in topbar
  * CSS fixes for comment background, ``:kbd:`` role, compound paragraphs
