@@ -25,6 +25,7 @@ setup(
     install_requires=[
         'sphinx>=3.1.2',
         'jinja2>=2.11',  # suport for pathlib.Path
+        'docutils<0.17',  # https://github.com/sphinx-doc/sphinx/issues/9001
     ],
     author='Matthias Geier',
     author_email='Matthias.Geier@gmail.com',
