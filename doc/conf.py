@@ -5,8 +5,7 @@
 
 html_theme = 'insipid'
 
-# Set to empty string to disable links to sections
-html_add_permalinks = '\N{SECTION SIGN}'
+html_permalinks_icon = '\N{SECTION SIGN}'
 
 # -- Recommended settings for readthedocs.org ---------------------------------
 
