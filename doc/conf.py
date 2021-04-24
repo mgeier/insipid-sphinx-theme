@@ -108,7 +108,7 @@ html_secnumber_suffix = '\N{FIGURE SPACE}'
 #html_domain_indices = False
 
 # The default in Sphinx 4+ is 'inline'
-html_codeblock_linenos_style = 'table'
+#html_codeblock_linenos_style = 'table'
 
 # -- Sphinx extensions --------------------------------------------------------
 
