@@ -310,6 +310,10 @@ table.highlighttable td.linenos {
     padding-right: 0.5em;
 }
 
+span.linenos {
+    margin-right: 0.7em;
+}
+
 /* highlighted line (:emphasize-lines:) */
 .highlight .hll {
     padding: 0 0.5em;
