@@ -1,3 +1,10 @@
+Version 0.2.5 -- 2021-05-09 -- docs__ -- PyPI__ -- diff__
+ * Support for Sphinx 4 and docutils 0.17
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.2.5/
+__ https://pypi.org/project/insipid-sphinx-theme/0.2.5/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.2.4...0.2.5
+
 Version 0.2.4 -- 2021-04-04 -- docs__ -- PyPI__ -- diff__
  * Disallow docutils 0.17+ (temporarily)
 
