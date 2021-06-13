@@ -138,7 +138,7 @@
 {%- if pagename != "search" and 'searchbox.html' not in sidebars %}
         <div id="searchbox" role="search">
           <form id="search-form" class="search" style="display: none" action="{{ pathto('search') }}" method="get">
-            <input type="search" name="q" placeholder="{{ _('Search') + ' ...' }}" />
+            <input type="search" name="q" placeholder="{{ _('Search') + ' ...' }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
             <button>{{ _('Go') }}</button>
           </form>
         </div>
