@@ -1,3 +1,11 @@
+Version 0.2.7 -- 2021-07-27 -- docs__ -- PyPI__ -- diff__
+ * Collapse sidebar on small devices if there is only one section
+ * Prevent corrections and completions in search field
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.2.7/
+__ https://pypi.org/project/insipid-sphinx-theme/0.2.7/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.2.6...0.2.7
+
 Version 0.2.6 -- 2021-05-30 -- docs__ -- PyPI__ -- diff__
  * Fix display of page title in topbar with docutils 0.17+
 
