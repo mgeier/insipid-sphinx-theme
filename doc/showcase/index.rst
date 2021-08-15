@@ -28,10 +28,11 @@ __ https://repo.or.cz/docutils.git/blob/master:/docutils/docs/user/rst/demo.txt
 
 Furthermore, several Sphinx themes have showcases in their documentation:
 
+- `furo <https://pradyunsg.me/furo/kitchen-sink/>`__
 - `pydata_sphinx_theme
   <https://pydata-sphinx-theme.readthedocs.io/en/latest/demo/>`__
 - `sphinx_book_theme
-  <https://sphinx-book-theme.readthedocs.io/en/latest/reference/>`__
+  <https://sphinx-book-theme.readthedocs.io/en/latest/reference/kitchen-sink/>`__
 - `sphinx_material
   <https://bashtage.github.io/sphinx-material/specimen.html>`__
 - `sphinx_rtd_theme
