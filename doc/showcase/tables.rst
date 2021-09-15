@@ -122,6 +122,24 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table
      - On a stick!
 
 
+Large Table
+-----------
+
+.. csv-table:: A wide table
+    :header: Label,Parameter1,Parameter2,Parameter3,Parameter4,Measure1,Measure2,Measure3,Measure4
+
+    Some fancy name1,first linear classifier,flying,denoised,emotional,0.9,0.6,3.12
+    Some fancy name2,second linear classifier,driving,noisy,emotional,0.8,0.6,4.23
+    Some fancy name3,third linear classifier,circling,denoised,non emotional,0.7,0.6,8.46
+    Some fancy name4,fourth linear classifier,moving,noisy,non emotional,0.6,0.6,8.23
+    Some fancy name5,fifth linear classifier,dancing,denoised,emotional,0.4,0.6,9.37
+    Some fancy name6,sixth linear classifier,sliding,noisy,emotional,0.8,0.6,4.32
+    Some fancy name7,seventh linear classifier,walking,denoised,non emotional,0.9,0.6,2.12
+    Some fancy name8,eights linear classifier,diving,noisy,emotional,0.2,0.4,4.32
+    Some fancy name9,ninth linear classifier,strolling,denoised,non emotional,0.5,0.6,2.42
+
+
+
 Nesting
 -------
 
