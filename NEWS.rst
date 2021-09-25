@@ -1,3 +1,10 @@
+Version 0.2.8 -- 2021-09-25 -- docs__ -- PyPI__ -- diff__
+ * Refine sidebar hiding
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.2.8/
+__ https://pypi.org/project/insipid-sphinx-theme/0.2.8/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.2.7...0.2.8
+
 Version 0.2.7 -- 2021-07-27 -- docs__ -- PyPI__ -- diff__
  * Collapse sidebar on small devices if there is only one section
  * Prevent corrections and completions in search field
