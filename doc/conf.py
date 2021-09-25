@@ -46,7 +46,7 @@ html_context = {
 html_theme_options = {
     #'body_centered': False,
     #'body_max_width': None,
-    #'breadcrumbs': True,
+    'breadcrumbs': True,
     #'enable_search_shortcuts': False,
     #'globaltoc_collapse': False,
     #'globaltoc_includehidden': True,
@@ -70,7 +70,7 @@ html_theme_options = {
 html_sidebars = {
    '**': [
        'github-badge.html',  # Custom template, see _templates/
-       'home.html',
+       #'home.html',
        'globaltoc.html',
        'separator.html',
        'indices.html',
