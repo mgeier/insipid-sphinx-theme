@@ -135,7 +135,7 @@ Large Table
     Some fancy name5,fifth linear classifier,dancing,denoised,emotional,0.4,0.6,9.37
     Some fancy name6,sixth linear classifier,sliding,noisy,emotional,0.8,0.6,4.32
     Some fancy name7,seventh linear classifier,walking,denoised,non emotional,0.9,0.6,2.12
-    Some fancy name8,eights linear classifier,diving,noisy,emotional,0.2,0.4,4.32
+    Some fancy name8,eighth linear classifier,diving,noisy,emotional,0.2,0.4,4.32
     Some fancy name9,ninth linear classifier,strolling,denoised,non emotional,0.5,0.6,2.42
 
 
