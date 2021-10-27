@@ -126,7 +126,7 @@ Large Table
 -----------
 
 .. csv-table:: A wide table
-    :header: Label,Parameter1,Parameter2,Parameter3,Parameter4,Measure1,Measure2,Measure3,Measure4
+    :header: Label,Parameter1,Parameter2,Parameter3,Parameter4,Measure1,Measure2,Measure3
 
     Some fancy name1,first linear classifier,flying,denoised,emotional,0.9,0.6,3.12
     Some fancy name2,second linear classifier,driving,noisy,emotional,0.8,0.6,4.23
