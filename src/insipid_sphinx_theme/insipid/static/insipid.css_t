@@ -237,18 +237,15 @@ a:visited {
 }
 
 a.external {
-    text-decoration: none;
-    border-bottom: 1px dotted #1863b5;
+    text-decoration: underline;
 }
 
 a.external:hover {
     text-decoration: none;
-    border-bottom: 1px dotted transparent;
 }
 
 a.external:visited {
     text-decoration: none;
-    border-bottom: 1px dotted #004188;
 }
 
 /* -- code formatting ------------------------------------------------------- */
