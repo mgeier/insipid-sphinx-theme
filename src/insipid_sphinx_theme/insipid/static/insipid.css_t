@@ -16,6 +16,8 @@ body {
     min-width: {{ theme_body_min_width|todim }};
     color: #000;
     background-color: #fff;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
 }
 
 /* keep the footer at the bottom (on very short pages) */
