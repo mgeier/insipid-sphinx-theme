@@ -1,3 +1,11 @@
+Version 0.2.9 -- 2021-12-04 -- docs__ -- PyPI__ -- diff__
+ * external links: replace border-bottom with underline
+ * avoid font size change between landscape and portrait
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.2.9/
+__ https://pypi.org/project/insipid-sphinx-theme/0.2.9/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.2.8...0.2.9
+
 Version 0.2.8 -- 2021-09-25 -- docs__ -- PyPI__ -- diff__
  * Refine sidebar hiding
 
