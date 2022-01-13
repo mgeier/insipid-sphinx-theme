@@ -8,6 +8,20 @@ $(document).ready(function () {
     var $topbar = $('#topbar');
     var $topbar_placeholder = $('#topbar-placeholder');
 
+    // make large images and tables horizontally scrollable
+    document.querySelectorAll(
+        'table.docutils:not(.field-list,.footnote,.citation), div.body img'
+    ).forEach(el => {
+        // Avoid wrapping <img> inside <a>, wrap parent instead:
+        if (!(el.previousSibling || el.nextSibling)) {
+            el = el.parentNode;
+        }
+        let wrapper = document.createElement('div');
+        wrapper.classList.add('insipid-horizontally-scrollable');
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+    });
+
     const threshold = 10;
 
     // auto-hide topbar
