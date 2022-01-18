@@ -199,10 +199,6 @@ hr.docutils {
     border-top: solid 1px #ccc;
 }
 
-img {
-    max-width: unset;
-}
-
 div.compound {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -708,10 +704,6 @@ body.js.sidebar-visible > .sidebar-resize-handle {
 
 body.js:not(.sidebar-visible) .sphinxsidebar {
     {{ sidebar_side }}: calc(0px - var(--sidebar-width));
-}
-
-div.sphinxsidebar img {
-    max-width: 100%;
 }
 
 div.sphinxsidebar h3 {
