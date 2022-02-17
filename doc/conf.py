@@ -36,6 +36,7 @@ html_theme_options = {
     #'breadcrumbs': True,
     #'globaltoc_collapse': False,
     #'globaltoc_includehidden': True,
+    #'initial_sidebar_visibility_threshold': None,
     #'left_buttons': [
     #],
     #'navigation_with_keys': False,

@@ -54,6 +54,9 @@ boring
     Most navigational tools can be hidden (and are in fact hidden by default),
     providing a maximum of screen real estate for
     and a minimum of distraction from your content.
+    Only if your browser window is extremely wide, the sidebar will be shown
+    on the initial visit.  This can be configured with
+    :theme-option:`initial_sidebar_visibility_threshold`.
 
 accessible
     *Help needed!*
@@ -155,7 +158,7 @@ keyboard navigation
 
     You can switch between pages using the left and right arrow keys.
     This feature can be disabled with :theme-option:`navigation_with_keys`.
-    
+
     In addition to the left/right arrow keys,
     several key combinations are provided using the ``accesskey`` HTML feature.
     The way to use these keyboard shortcuts depends on the browser
@@ -193,7 +196,7 @@ support for https://readthedocs.org/
     The RTD "badge" (for selecting versions, languages etc.)
     is incorporated into the bottom of the ``insipid`` sidebar
     (instead of floating around in the bottom right corner of the page).
-   
+
     Furthermore, a link to the connected Bitbucket/Github/GitLab repository
     is automatically displayed in the topbar.
     This can be disabled by overriding :theme-option:`right_buttons`.

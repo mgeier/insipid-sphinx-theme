@@ -51,6 +51,16 @@ See below for `default values`_.
     at the top of each page
     (via the :gh-template:`page.html` template).
 
+.. theme-option:: initial_sidebar_visibility_threshold
+
+    The visibility of the sidebar depends on the setting from the previous
+    visit, which is stored in the browser's ``localStorage``.
+    If no information is available (i.e., on the first visit),
+    the sidebar is hidden, except if the browser window is wider
+    than the given threshold (in pixels or any CSS unit).
+    If ``None`` is given, or if JavaScript is disabled in the browser,
+    the sidebar is initially hidden, regardless of screen width.
+
 .. theme-option:: left_buttons
 
     List of templates to show on the left side of the title bar.

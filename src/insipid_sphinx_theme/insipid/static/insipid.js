@@ -92,6 +92,7 @@ $(document).ready(function () {
         } else {
             $search_form.hide();
             $search_button.attr('aria-expanded', 'false');
+            $search_button.blur();
         }
     });
 
