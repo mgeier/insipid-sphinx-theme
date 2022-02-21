@@ -7,6 +7,7 @@ Some further ideas were stolen from the Sphinx themes
 sphinx_typlog_theme_ (https://readthedocs.org/ badge),
 sphinx_material_ (previous/next arrows in relbar),
 sphinx_book_theme_ (fullscreen button),
+furo_ (sidebar that can be toggled without JavaScript),
 as well as websites like
 Github_,
 MDN_,
@@ -27,6 +28,7 @@ __ https://github.com/search?q=sphinx+theme
 .. _sphinx_typlog_theme: https://sphinx-typlog-theme.readthedocs.io/
 .. _sphinx_material: https://bashtage.github.io/sphinx-material/
 .. _sphinx_book_theme: https://sphinx-book-theme.readthedocs.io/
+.. _furo: https://pradyunsg.me/furo/quickstart/
 .. _Github: https://github.com/
 .. _MDN: https://developer.mozilla.org/en-US/docs/Web
 
@@ -82,11 +84,13 @@ support for right-to-left languages
     except for a measly :theme-option:`rightsidebar` theme option.
 
 optional JavaScript
-    Some features (like hiding/resizing navigational tools, search,
+    Some features (like resizing the sidebar, storing the sidebar state when
+    navigating between pages, hiding/showing the topbar, search,
     fullscreen button) require JavaScript.
     However, if JavaScript is disabled,
     all content should still be perfectly readable and the navigation within
-    and between pages should still work reasonably well.
+    and between pages should still work well.
+    Even opening and closing the sidebar works without JavaScript.
 
 support for *all* Sphinx features
     The largest part of this documentation
