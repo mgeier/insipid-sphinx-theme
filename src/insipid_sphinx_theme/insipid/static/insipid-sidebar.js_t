@@ -6,6 +6,7 @@
     const sidebar_checkbox = document.getElementById('sidebar-checkbox');
     const topbar = document.getElementById('topbar');
     const overlay = document.getElementById('overlay');
+    const root = document.documentElement;
 
     sidebar.setAttribute('id', 'sphinxsidebar');  // for aria-controls
 
@@ -15,10 +16,6 @@
         } else {
             return window.getComputedStyle(this).getPropertyValue(name);
         }
-    }
-
-    function css_variable(name, ...value) {
-        return document.documentElement.css(name, ...value);
     }
 
     function updateSidebarAttributesVisible() {
@@ -157,9 +154,9 @@
         var width = {% if theme_rightsidebar|tobool -%}
             window_width - {% endif %}e.clientX;
         if (width > window_width) {
-            css_variable('--sidebar-width', window_width + 'px');
+            root.css('--sidebar-width', window_width + 'px');
         } else if (width > 10) {
-            css_variable('--sidebar-width', width + 'px');
+            root.css('--sidebar-width', width + 'px');
         } else {
             ignore_resize = true;
             hide();
@@ -178,10 +175,10 @@
 
     function stop_resize_base() {
         if (ignore_resize) {
-            css_variable('--sidebar-width', '{{ theme_sidebarwidth|todim }}');
+            root.css('--sidebar-width', '{{ theme_sidebarwidth|todim }}');
             ignore_resize = false;
         }
-        store('sphinx-sidebar-width', css_variable('--sidebar-width'));
+        store('sphinx-sidebar-width', root.css('--sidebar-width'));
         document.body.classList.remove('sidebar-resizing');
     }
 
@@ -204,7 +201,7 @@
     $(window).on('resize', function () {
         const window_width = window.innerWidth;
         if (window_width < sidebar.offsetWidth) {
-            css_variable('--sidebar-width', window_width + 'px');
+            root.css('--sidebar-width', window_width + 'px');
         }
     });
 
@@ -218,7 +215,7 @@
                 } else {
                     height = entry.contentRect.height;
                 }
-                css_variable('--topbar-height', height + 'px');
+                root.css('--topbar-height', height + 'px');
             }
         });
         resizeObserver.observe(topbar);
@@ -240,12 +237,12 @@
                         } else {
                             height = entry.contentRect.height;
                         }
-                        css_variable('--readthedocs-badge-height', height + 'px');
+                        root.css('--readthedocs-badge-height', height + 'px');
                     }
                 });
                 resizeObserver.observe(badge);
             } else {
-                css_variable('--readthedocs-badge-height', badge.offsetHeight + 'px');
+                root.css('--readthedocs-badge-height', badge.offsetHeight + 'px');
             }
         }
     };
