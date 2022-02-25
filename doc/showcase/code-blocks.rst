@@ -204,6 +204,13 @@ Nesting
 
         'code in quote'
 
+.. warning::
+
+    definition term
+        ::
+
+            'code in definition in admonition'
+
 .. sidebar:: Sidebar
 
     .. code-block:: python

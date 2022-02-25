@@ -1,3 +1,7 @@
+.. tip::
+
+    Admonitions can also be used before the first headline.
+
 Admonitions
 ===========
 
