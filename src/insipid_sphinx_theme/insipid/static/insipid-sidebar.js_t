@@ -80,7 +80,7 @@
     }
 
     sidebar_button.addEventListener('keydown', event => {
-        if (event.code == 'Enter' || event.code == 'Space') {
+        if (event.code === 'Enter' || event.code === 'Space') {
             sidebar_button.click();
             event.preventDefault();
         }
@@ -277,7 +277,7 @@
         }
     })
 
-    if ($current.length == 1 && $current[0].childElementCount == 1 && small_screen.matches) {
+    if ($current.length === 1 && $current[0].childElementCount === 1 && small_screen.matches) {
         hide();
     }
 {%- endif %}
