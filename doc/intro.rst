@@ -7,6 +7,7 @@ Some further ideas were stolen from the Sphinx themes
 sphinx_typlog_theme_ (https://readthedocs.org/ badge),
 sphinx_material_ (previous/next arrows in relbar),
 sphinx_book_theme_ (fullscreen button),
+furo_ (sidebar that can be toggled without JavaScript),
 as well as websites like
 Github_,
 MDN_,
@@ -27,6 +28,7 @@ __ https://github.com/search?q=sphinx+theme
 .. _sphinx_typlog_theme: https://sphinx-typlog-theme.readthedocs.io/
 .. _sphinx_material: https://bashtage.github.io/sphinx-material/
 .. _sphinx_book_theme: https://sphinx-book-theme.readthedocs.io/
+.. _furo: https://pradyunsg.me/furo/quickstart/
 .. _Github: https://github.com/
 .. _MDN: https://developer.mozilla.org/en-US/docs/Web
 
@@ -54,6 +56,9 @@ boring
     Most navigational tools can be hidden (and are in fact hidden by default),
     providing a maximum of screen real estate for
     and a minimum of distraction from your content.
+    Only if your browser window is extremely wide, the sidebar will be shown
+    on the initial visit.  This can be configured with
+    :theme-option:`initial_sidebar_visibility_threshold`.
 
 accessible
     *Help needed!*
@@ -79,11 +84,13 @@ support for right-to-left languages
     except for a measly :theme-option:`rightsidebar` theme option.
 
 optional JavaScript
-    Some features (like hiding/resizing navigational tools, search,
+    Some features (like resizing the sidebar, storing the sidebar state when
+    navigating between pages, hiding/showing the topbar, search,
     fullscreen button) require JavaScript.
     However, if JavaScript is disabled,
     all content should still be perfectly readable and the navigation within
-    and between pages should still work reasonably well.
+    and between pages should still work well.
+    Even opening and closing the sidebar works without JavaScript.
 
 support for *all* Sphinx features
     The largest part of this documentation
@@ -155,7 +162,7 @@ keyboard navigation
 
     You can switch between pages using the left and right arrow keys.
     This feature can be disabled with :theme-option:`navigation_with_keys`.
-    
+
     In addition to the left/right arrow keys,
     several key combinations are provided using the ``accesskey`` HTML feature.
     The way to use these keyboard shortcuts depends on the browser
@@ -193,7 +200,7 @@ support for https://readthedocs.org/
     The RTD "badge" (for selecting versions, languages etc.)
     is incorporated into the bottom of the ``insipid`` sidebar
     (instead of floating around in the bottom right corner of the page).
-   
+
     Furthermore, a link to the connected Bitbucket/Github/GitLab repository
     is automatically displayed in the topbar.
     This can be disabled by overriding :theme-option:`right_buttons`.

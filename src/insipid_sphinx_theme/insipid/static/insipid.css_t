@@ -36,7 +36,7 @@ div.body {
     line-height: 1.618;
 }
 
-body.js * {
+* {
     scroll-margin-top: var(--topbar-height);
     scroll-snap-margin-top: var(--topbar-height);  /* Safari */
 }
@@ -650,15 +650,19 @@ div.sphinxsidebar {
     overscroll-behavior: contain;
 }
 
-body.sidebar-visible {
+#sidebar-checkbox:checked ~ div.document,
+#sidebar-checkbox:checked ~ .relbar,
+#sidebar-checkbox:checked ~ footer {
     margin-{{ sidebar_side }}: var(--sidebar-width);
 }
 
-body.js:not(.sidebar-resizing) {
+body:not(.sidebar-resizing) div.document,
+body:not(.sidebar-resizing) .relbar,
+body:not(.sidebar-resizing) footer {
     transition: margin-{{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
-body.js:not(.sidebar-resizing) .sphinxsidebar {
+body:not(.sidebar-resizing) .sphinxsidebar {
     transition: {{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
@@ -684,7 +688,8 @@ div.sphinxsidebarwrapper > :last-child {
     bottom: 0;
 }
 
-body.js.sidebar-visible .sidebar-resize-handle {
+body.js #sidebar-checkbox:checked ~ .sidebar-resize-handle,
+body.js #sidebar-checkbox:checked ~ div.document .sidebar-resize-handle {
     display: block;
     cursor: col-resize;
     width: 10px;
@@ -698,11 +703,12 @@ body.js.sidebar-visible .sidebar-resize-handle {
     {%- endif %}
 }
 
-body.js.sidebar-visible > .sidebar-resize-handle {
-    {{ sidebar_side }}: 0;
+body.js #sidebar-checkbox:checked ~ .sidebar-resize-handle {
+    z-index: 390;{# same as sidebar #}
+    {{ sidebar_side }}: var(--sidebar-width);
 }
 
-body.js:not(.sidebar-visible) .sphinxsidebar {
+#sidebar-checkbox:not(:checked) ~ div.document .sphinxsidebar {
     {{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }
 
@@ -857,20 +863,9 @@ div.sphinxsidebar input {
 
 #topbar-placeholder {
     z-index: 500;
-}
-
-body.js #topbar-placeholder {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-}
-
-body.sidebar-visible #topbar-placeholder {
-    margin-{{ sidebar_side }}: calc(0px - var(--sidebar-width));
-}
-
-body.js:not(.sidebar-resizing) #topbar-placeholder {
-    transition: margin-{{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
 #topbar {
@@ -890,6 +885,7 @@ body.js:not(.sidebar-resizing) #topbar-placeholder {
 }
 
 #topbar button:hover,
+#titlebar .buttons > *:hover,
 #titlebar a:hover,
 .relbar a:hover,
 .relbar a:hover .icon {
@@ -947,7 +943,6 @@ body.js #topbar {
     transition: transform {{ theme_topbar_transition }};
 }
 
-body:not(.js) #sidebar-button,
 body:not(.js) #search-button {
     display: none;
 }
@@ -1048,22 +1043,22 @@ div.body, .relbar, footer, div.articleComments {
 }
 
 {%- if theme_rightsidebar|tobool %}
-body.sidebar-visible .nav-icon {
+#sidebar-checkbox:checked ~ nav .nav-icon {
     right: var(--sidebar-width);
 }
 
 {%- if not theme_body_centered|tobool %}
-body.js:not(.sidebar-resizing) .nav-icon.previous,
+body:not(.sidebar-resizing) .nav-icon.previous,
 {%- endif %}
-body.js:not(.sidebar-resizing) .nav-icon.next {
+body:not(.sidebar-resizing) .nav-icon.next {
     transition: right {{ theme_sidebar_transition }};
 }
 {%- elif theme_body_centered|tobool %}
-body.sidebar-visible .nav-icon.previous {
+#sidebar-checkbox:checked ~ nav .nav-icon.previous {
     left: var(--sidebar-width);
 }
 
-body.js:not(.sidebar-resizing) .nav-icon.previous {
+body:not(.sidebar-resizing) .nav-icon.previous {
     transition: left {{ theme_sidebar_transition }};
 }
 {%- endif %}
@@ -1085,20 +1080,19 @@ div.viewcode-block:target {
 
 /* -- media queries --------------------------------------------------------- */
 
+{%- if theme_sidebar_overlay_width != None %}
 @media only screen and (max-width: {{ theme_sidebar_overlay_width|todim }}) {
-    body.sidebar-visible {
+    #sidebar-checkbox:checked ~ div.document,
+    #sidebar-checkbox:checked ~ .relbar,
+    #sidebar-checkbox:checked ~ footer {
         margin-{{ sidebar_side }}: 0;
     }
 
-    body.sidebar-visible #topbar-placeholder {
+    #sidebar-checkbox:checked ~ #topbar-placeholder {
         margin-{{ sidebar_side }}: 0;
     }
 
-    body.js.sidebar-visible {
-        overflow: hidden;
-    }
-
-    body.js #overlay {
+    #overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -1111,26 +1105,21 @@ div.viewcode-block:target {
         z-index: 380;
     }
 
-    body.js.sidebar-visible #overlay {
+    #sidebar-checkbox:checked ~ #overlay {
         visibility: visible;
         opacity: 1;
         transition: opacity {{ theme_sidebar_transition }};
     }
 
-    body:not(.js) .sphinxsidebar {
-        position: relative;
-        top: unset;
-        width: unset;
-    }
-
-    body.js.sidebar-visible #titlebar .parent {
+    #sidebar-checkbox:checked ~ #topbar-placeholder #titlebar .parent {
         display: unset;
     }
 
-    body.js.sidebar-visible #titlebar .top {
+    #sidebar-checkbox:checked ~ #topbar-placeholder #titlebar #titlebar .top {
         display: none;
     }
 }
+{%- endif %}
 
 body:not(.js) #fullscreen-button {
     display: none;
