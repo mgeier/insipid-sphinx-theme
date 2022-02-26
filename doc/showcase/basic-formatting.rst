@@ -82,6 +82,9 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#inline-markup
 
 Normal ``Inline Literal`` *Emphasis* **Strong Emphasis**.
 
+Multiple    spaces are   not   collapsed in inline literals: ``a   b  c``.
+``very/long/literals/are/broken/without/inserting/a/hyphen``.
+``averyveryveryverylongsinglewordisalsoforciblybrokenatsomepointwithoutinsertingahyphen``.
 
 Hyperlinks
 ----------

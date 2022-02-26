@@ -321,6 +321,11 @@ kbd.docutils:not(.compound) {
     border: 1px solid #333;
 }
 
+span.pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
 /* -- admonitions ----------------------------------------------------------- */
 
 div.topic, div.sidebar, aside.sidebar {
