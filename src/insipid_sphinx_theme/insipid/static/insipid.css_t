@@ -359,7 +359,8 @@ div.topic {
     margin: 10px -7px;
 }
 
-div.sidebar {
+div.sidebar,
+aside.sidebar {
     margin-right: -7px;
 }
 
