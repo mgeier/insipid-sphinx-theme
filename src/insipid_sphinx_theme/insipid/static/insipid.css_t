@@ -542,7 +542,7 @@ div.body dl.exception > dt:not(:target) {
 /* -- relbar ---------------------------------------------------------------- */
 
 .relbar {
-    padding: 0 10px;
+    padding: 10px 10px 0;
 }
 
 .relbar > a {
