@@ -263,14 +263,14 @@ pre {
     font-size: 0.875em;
 }
 
-.section > div[class*=highlight],
-.section > .compound > div[class*=highlight],
-.section > .literal-block-wrapper > div[class*=highlight],
+.section > div > div.highlight,
+.section > .compound > div > div.highlight,
+.section > .literal-block-wrapper > div > div.highlight,
 .section > pre.literal-block,
 .section > .compound > pre.literal-block,
-section > div[class*=highlight],
-section > .compound > div[class*=highlight],
-section > .literal-block-wrapper > div[class*=highlight],
+section > div > div.highlight,
+section > .compound > div > div.highlight,
+section > .literal-block-wrapper > div > div.highlight,
 section > pre.literal-block,
 section > .compound > pre.literal-block {
     margin-left: -7px;
