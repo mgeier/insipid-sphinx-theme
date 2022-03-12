@@ -354,8 +354,9 @@ div.topic, div.sidebar, aside.sidebar {
 .section > div.admonition,
 section > div.admonition,
 div.body > div.admonition,
-/* a topic is only allowed at the top level */
-div.topic {
+.section > div.topic,
+section > div.topic,
+div.body > div.topic {
     margin: 10px -7px;
 }
 
