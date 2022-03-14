@@ -502,11 +502,6 @@ ol.simple p, ul.simple p {
     padding-left: unset;
 }
 
-.toctree-wrapper li,
-.contents li {
-    line-height: normal;
-}
-
 dl.citation > dt {
     font-weight: 600;
 }
