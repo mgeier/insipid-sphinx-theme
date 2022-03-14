@@ -82,13 +82,29 @@ Some text.
     Some text.
 
 
-(Local) Table of Contents
--------------------------
+Table of Contents
+-----------------
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#table-of-contents
 
 .. contents:: Table of Contents
+    :backlinks: none
 
+
+Local Table of Contents
+-----------------------
+
+.. contents::
+   :local:
+
+Subsection One
+^^^^^^^^^^^^^^
+
+Subsubsection
+'''''''''''''
+
+Subsection Two
+^^^^^^^^^^^^^^
 
 Nested ``toctree``
 ------------------

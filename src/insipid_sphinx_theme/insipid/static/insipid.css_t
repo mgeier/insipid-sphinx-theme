@@ -388,7 +388,8 @@ div.topic > p.topic-title + *,
     margin-top: 0;
 }
 
-div.admonition > :first-child:not(.admonition-title) {
+div.admonition > :first-child:not(.admonition-title),
+div.topic > :first-child:not(.topic-title) {
     margin-top: 0;
 }
 
@@ -488,6 +489,12 @@ ol.simple p, ul.simple p {
 .toctree-wrapper ul,
 .contents ul {
     list-style: none;
+    margin-top: 0.5em;
+}
+
+.toctree-wrapper li:not(:first-child),
+.contents li:not(:first-child) {
+    margin-top: 0.5em;
 }
 
 .toctree-wrapper > ul,
@@ -497,7 +504,6 @@ ol.simple p, ul.simple p {
 
 .toctree-wrapper li,
 .contents li {
-    margin-top: 0.5em;
     line-height: normal;
 }
 
