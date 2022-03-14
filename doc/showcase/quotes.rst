@@ -71,6 +71,17 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#block-quotes
 
         Block quote in an :doc:`admonition <admonitions>`.
 
+#. List item
+
+   text
+
+     block quote
+
+definition term
+   text
+
+     block quote
+
 
 Epigraphs
 ---------
