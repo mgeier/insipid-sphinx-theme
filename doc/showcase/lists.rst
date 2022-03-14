@@ -47,7 +47,11 @@ and/or a single nested list, each item containing ...
   
   - A second level paragraph.
 
-  - A second level paragraph.
+  - A second level paragraph with significantly more text in it.
+    So much text that there will be at least one line break within the paragraph.
+    This will show the difference in spacing between lines and list items.
+    Do you see a difference?
+    Or is it the same?
 
 * Another first level paragraph.
 
