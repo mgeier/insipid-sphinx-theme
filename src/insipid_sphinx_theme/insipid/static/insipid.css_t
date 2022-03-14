@@ -481,6 +481,10 @@ ol, ul {
     padding-left: 1.2em;
 }
 
+ol.simple p, ul.simple p {
+    margin-bottom: 0.3em;
+}
+
 .toctree-wrapper ul,
 .contents ul {
     list-style: none;
