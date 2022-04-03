@@ -16,7 +16,7 @@ Installation and Usage
 
 #.  Edit the :file:`conf.py` file
     (just create an empty file if it doesn't exist yet,
-    or use :doc:`man/sphinx-quickstart`) and add/edit the line:
+    or use :doc:`sphinx:man/sphinx-quickstart`) and add/edit the line:
 
     .. code-block:: python
  
@@ -50,7 +50,7 @@ Installation and Usage
 
         python3 -m sphinx doc html-files
 
-    For more options, see :doc:`man/sphinx-build`.
+    For more options, see :doc:`sphinx:man/sphinx-build`.
 
 
 That should be it.
