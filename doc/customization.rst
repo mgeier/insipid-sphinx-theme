@@ -104,7 +104,7 @@ one could create a customized note by replacing the existing template
     <a href="https://creativecommons.org/publicdomain/zero/1.0/"
        class="reference external">CC0 1.0</a>.
 
-For further information, see :doc:`templating`.
+For further information, see :doc:`sphinx:templating`.
 
 
 Custom SVG Icons
@@ -133,7 +133,7 @@ If you want to re-use your custom templates in multiple Sphinx projects,
 you can create your own theme derived from the ``insipid`` theme
 (you can of course also derive from any other theme, if you prefer!).
 
-For all the details, have a look at :doc:`usage/theming`.
+For all the details, have a look at :doc:`sphinx:usage/theming`.
 Here, we'll just give a quick summary.
 
 You should create a directory named after your theme,
@@ -236,4 +236,4 @@ drop the ``defer`` flag.
 
 For more information and inspiration,
 have a look at the ``insipid`` theme's sources
-and at the aforementioned :doc:`usage/theming` page.
+and at the aforementioned :doc:`sphinx:usage/theming` page.
