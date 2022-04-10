@@ -25,7 +25,6 @@ setup(
     install_requires=[
         'sphinx>=3.1.2',
         'jinja2>=2.11',  # suport for pathlib.Path
-        'docutils',
     ],
     author='Matthias Geier',
     author_email='Matthias.Geier@gmail.com',
