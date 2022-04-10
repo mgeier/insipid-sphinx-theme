@@ -204,6 +204,12 @@ hr.docutils {
     border-top: solid 1px #ccc;
 }
 
+.section > hr.docutils,
+section > hr.docutils {
+    margin-left: -7px;
+    margin-right: -7px;
+}
+
 div.compound {
     margin-top: 1em;
     margin-bottom: 1em;
