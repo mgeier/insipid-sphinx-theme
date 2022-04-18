@@ -39,5 +39,3 @@ Furthermore, several Sphinx themes have showcases in their documentation:
   <https://sphinx-rtd-theme.readthedocs.io/en/stable/demo/structure.html>`__
 - `sphinx_typlog_theme
   <https://sphinx-typlog-theme.readthedocs.io/en/latest/markup.html>`__
-- `t3SphinxThemeRtd
-  <https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/>`__
