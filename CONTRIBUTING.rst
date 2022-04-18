@@ -59,3 +59,15 @@ To (re-)build the HTML files, use::
    python3 setup.py build_sphinx
 
 The generated files will be available in the directory ``build/sphinx/html/``.
+
+
+Auto-Generated Documentation for Pull Requests
+----------------------------------------------
+
+Whenever a Pull Request (PR) is created on
+https://github.com/mgeier/insipid-sphinx-theme/pull/,
+the documentation is automatically built on https://readthedocs.org/.
+On the PR page, find the latest commit and click on its green check mark
+(or on the red "x" in case of a test failure),
+look for the **readthedocs.org** entry and click on "Details"
+to see the auto-generated HTML pages.
