@@ -8,7 +8,7 @@ The documentation pages you are reading right now
 are meant to be a showcase for how
 certain Sphinx features look with the ``insipid`` theme.
 
-The following pages try to show all HTML constucts that can be created with
+The following pages try to show all HTML constructs that can be created with
 Sphinx.
 
 If you notice that something is missing, please create a bug report at
