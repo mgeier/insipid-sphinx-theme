@@ -50,6 +50,7 @@
 {% block css %}
     <link rel="stylesheet" href="{{ pathto('_static/basic.css', 1) }}" type="text/css" />
 {{- super() }}
+    <link rel="preload" href="https://assets.readthedocs.org/static/css/badge_only.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 {%- if READTHEDOCS|tobool and render_sidebar %}
     <link rel="stylesheet" href="{{ pathto('_static/insipid-sidebar-readthedocs.css', 1) }}" type="text/css" />
 {%- endif %}
