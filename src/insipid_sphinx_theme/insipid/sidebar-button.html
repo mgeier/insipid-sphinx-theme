@@ -1,6 +1,6 @@
 {# NB: "title" and some ARIA attributes are set via JavaScript. #}
 {%- if render_sidebar %}
-            <label for="sidebar-checkbox" id="sidebar-button" tabindex="0" aria-controls="sphinxsidebar" accesskey="M">
+            <label for="sidebar-checkbox" id="sidebar-button" role="button" tabindex="0" aria-controls="sphinxsidebar" accesskey="M">
               {% include 'icons/menu.svg' %}
             </label>
 {%- endif %}
