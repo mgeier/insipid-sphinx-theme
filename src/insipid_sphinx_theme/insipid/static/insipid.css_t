@@ -351,6 +351,10 @@ span.pre {
     overflow-wrap: anywhere;
 }
 
+table.autosummary span.pre {
+    overflow-wrap: break-word;
+}
+
 /* -- admonitions ----------------------------------------------------------- */
 
 div.topic, div.sidebar, aside.sidebar {
