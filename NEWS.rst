@@ -1,3 +1,14 @@
+Version 0.3.0 -- 2022-05-08 -- docs__ -- PyPI__ -- diff__
+ * Toggleable sidebar without JavaScript
+ * Allow wrapping of long inline literals
+ * Various padding/margin changes (including negative margins)
+ * Limit <img> size to 100% (as in ``basic`` theme)
+ * Make wide tables horizontally scrollable
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.3.0/
+__ https://pypi.org/project/insipid-sphinx-theme/0.3.0/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.2.9...0.3.0
+
 Version 0.2.9 -- 2021-12-04 -- docs__ -- PyPI__ -- diff__
  * external links: replace border-bottom with underline
  * avoid font size change between landscape and portrait
