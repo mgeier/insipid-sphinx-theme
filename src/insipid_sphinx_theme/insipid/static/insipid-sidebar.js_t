@@ -1,5 +1,12 @@
-(() => { function dom_loaded() {
+(dom_loaded => {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', dom_loaded);
+    } else {
+        dom_loaded();
+    }
+})(() => { 
     'use strict';
+
     const sidebar = document.querySelector('.sphinxsidebar');
     const sidebar_tabbable = sidebar.querySelectorAll('input, textarea, select, button, a[href], area[href], iframe');
     const sidebar_button = document.getElementById('sidebar-button');
@@ -86,11 +93,11 @@
         }
     });
 
-    var touchstart;
+    let touchstart;
 
     document.addEventListener('touchstart', event => {
         if (event.touches.length > 1) { return; }
-        var touch = event.touches[0];
+        const touch = event.touches[0];
         {%- if theme_rightsidebar|tobool %}
         if (touch.clientX >= window.innerWidth - sidebar.offsetWidth) {
         {%- else %}
@@ -110,12 +117,12 @@
             touchstart = null;
             return;
         }
-        var touch = event.changedTouches[0];
-        var x = touch.clientX;
-        var y = touch.clientY;
-        var x_diff = x - touchstart.x;
-        var y_diff = y - touchstart.y;
-        var t_diff = Date.now() - touchstart.t;
+        const touch = event.changedTouches[0];
+        const x = touch.clientX;
+        const y = touch.clientY;
+        const x_diff = x - touchstart.x;
+        const y_diff = y - touchstart.y;
+        const t_diff = Date.now() - touchstart.t;
         if (t_diff < 400 && Math.abs(x_diff) > Math.max(100, Math.abs(y_diff))) {
             {%- if theme_rightsidebar|tobool %}
             if (x_diff < 0) {
@@ -134,28 +141,29 @@
         touchstart = null;
     });
 
-    $('.sidebar-resize-handle').on('mousedown', event => {
-        $(window).on('mousemove', resize_mouse);
-        $(window).on('mouseup', stop_resize_mouse);
-        document.body.classList.add('sidebar-resizing');
-        return false;  // Prevent unwanted text selection while resizing
+    const sidebar_resize_handles = document.querySelectorAll('.sidebar-resize-handle');
+    sidebar_resize_handles.forEach(el => {
+        el.addEventListener('mousedown', event => {
+            window.addEventListener('mousemove', resize_mouse);
+            window.addEventListener('mouseup', stop_resize_mouse);
+            document.body.classList.add('sidebar-resizing');
+            event.preventDefault();  // Prevent unwanted text selection while resizing
+        });
+        el.addEventListener('touchstart', event => {
+            if (event.touches.length > 1) { return; }
+            window.addEventListener('touchmove', resize_touch);
+            window.addEventListener('touchend', stop_resize_touch);
+            document.body.classList.add('sidebar-resizing');
+            event.preventDefault();  // Prevent unwanted text selection while resizing
+        });
     });
 
-    $('.sidebar-resize-handle').on('touchstart', event => {
-        event = event.originalEvent;
-        if (event.touches.length > 1) { return; }
-        $(window).on('touchmove', resize_touch);
-        $(window).on('touchend', stop_resize_touch);
-        document.body.classList.add('sidebar-resizing');
-        return false;  // Prevent unwanted text selection while resizing
-    });
-
-    var ignore_resize = false;
+    let ignore_resize = false;
 
     function resize_base(event) {
         if (ignore_resize) { return; }
-        var window_width = window.innerWidth;
-        var width = {% if theme_rightsidebar|tobool -%}
+        const window_width = window.innerWidth;
+        const width = {% if theme_rightsidebar|tobool -%}
             window_width - {% endif %}event.clientX;
         if (width > window_width) {
             root.css('--sidebar-width', window_width + 'px');
@@ -168,11 +176,10 @@
     }
 
     function resize_mouse(event) {
-        resize_base(event.originalEvent);
+        resize_base(event);
     }
 
     function resize_touch(event) {
-        event = event.originalEvent;
         if (event.touches.length > 1) { return; }
         resize_base(event.touches[0]);
     }
@@ -187,22 +194,21 @@
     }
 
     function stop_resize_mouse(event) {
-        $(window).off('mousemove', resize_mouse);
-        $(window).off('mouseup', stop_resize_mouse);
+        window.removeEventListener('mousemove', resize_mouse);
+        window.removeEventListener('mouseup', stop_resize_mouse);
         stop_resize_base();
     }
 
     function stop_resize_touch(event) {
-        event = event.originalEvent;
         if (event.touches.length > 0 || event.changedTouches.length > 1) {
             return;
         }
-        $(window).off('touchmove', resize_touch);
-        $(window).off('touchend', stop_resize_touch);
+        window.removeEventListener('touchmove', resize_touch);
+        window.removeEventListener('touchend', stop_resize_touch);
         stop_resize_base();
     }
 
-    $(window).on('resize', () => {
+    window.addEventListener('resize', event => {
         const window_width = window.innerWidth;
         if (window_width < sidebar.offsetWidth) {
             root.css('--sidebar-width', window_width + 'px');
@@ -227,7 +233,7 @@
 
 {%- if READTHEDOCS|tobool %}
     function setResizeObserver() {
-        var badge = document.querySelector('.rst-versions.rst-badge');
+        const badge = document.querySelector('.rst-versions.rst-badge');
         if (badge === null) {
             console.log('waiting for readthedocs.org badge');
             window.requestAnimationFrame(setResizeObserver);
@@ -253,41 +259,35 @@
     window.requestAnimationFrame(setResizeObserver);
 {%- endif %}
 
-    var $current = $('.sphinxsidebar *:has(> a[href^="#"])');
-{# Possible non-jQuery replacement:
     const current = Array.from(document.querySelectorAll('.sphinxsidebar *')).filter(el => el.querySelector(':scope > a[href^="#"]'));
-#}
-
-    $current.addClass('current-page');
-    if ($current.length) {
-        var top = $current.offset().top;
-        var height = $current.height();
-        const topbar_height = topbar.offsetHeight;
-        if (top < topbar_height || top + height > sidebar.offsetHeight) {
-            $current[0].scrollIntoView(true);
-        }
-    }
 
 {%- if theme_sidebar_overlay_width != None %}
     const small_screen = window.matchMedia('(max-width: {{ theme_sidebar_overlay_width|todim }})');
 
-    $current.on('click', '> a', () => {
-        if (small_screen.matches) {
-            hide();
-        }
-    })
-
-    if ($current.length === 1 && $current[0].childElementCount === 1 && small_screen.matches) {
+    if (current.length === 1 && current[0].childElementCount === 1 && small_screen.matches) {
         hide();
     }
 {%- endif %}
-}
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', dom_loaded);
-} else {
-    dom_loaded();
-}})();
+    if (current.length) {
+        const top = current[0].getBoundingClientRect().top;
+        const bottom = current[current.length - 1].getBoundingClientRect().bottom;
+        if (top < topbar.offsetHeight || bottom > sidebar.offsetHeight) {
+            current[0].scrollIntoView(true);
+        }
+    }
+
+    current.forEach(el => {
+        el.classList.add('current-page');
+{%- if theme_sidebar_overlay_width != None %}
+        el.querySelector(':scope > a').addEventListener('click', event => {
+            if (small_screen.matches) {
+                hide();
+            }
+        })
+{%- endif %}
+    });
+});
 
 {#
 vim:ft=javascript
