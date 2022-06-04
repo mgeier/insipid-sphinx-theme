@@ -13,11 +13,11 @@ authors = [
   {name = "Matthias Geier", email = "Matthias.Geier@gmail.com"},
 ]
 dependencies = [
-  "sphinx >= 5",
-  "docutils >= 0.18",
+  "sphinx >= 6, < 7",
+  "docutils >= 0.18.1, < 0.20",
   "jinja2 >= 2.11",  # suport for pathlib.path
 ]
-requires-python = ">= 3.6"
+requires-python = ">= 3.8"
 classifiers = [
   "Framework :: Sphinx",
   "Framework :: Sphinx :: Theme",
