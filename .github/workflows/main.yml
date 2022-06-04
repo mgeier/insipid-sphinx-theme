@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v6
       with:
-        python-version: "3"
+        python-version: "3.12" # imghdr was removed in 3.13
     - name: Double-check Python version
       run: |
         python --version
@@ -31,6 +31,8 @@ jobs:
       run: |
         $PIP install --group doc
     - name: Build HTML
+      env:
+        PYTHONWARNINGS: error,default::DeprecationWarning
       run: |
         $SPHINX -d _build/doctrees/ doc/ _build/html/ -b html
     - name: Upload error log
@@ -40,6 +42,8 @@ jobs:
         name: build-log
         path: /tmp/sphinx-err-*.log
     - name: Check links
+      env:
+        PYTHONWARNINGS: error,default::DeprecationWarning
       run: |
         $SPHINX -d _build/doctrees/ doc/ _build/linkcheck/ -b linkcheck -q
     - name: Upload linkcheck results

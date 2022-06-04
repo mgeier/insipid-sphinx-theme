@@ -13,9 +13,14 @@ authors = [
   {name = "Matthias Geier", email = "Matthias.Geier@gmail.com"},
 ]
 dependencies = [
-  "sphinx >= 5",
-  "docutils >= 0.18",
+  "sphinx >= 4, < 5",
+  "docutils >= 0.17, < 0.18",
   "jinja2 >= 2.11",  # suport for pathlib.path
+  "sphinxcontrib-applehelp < 1.0.8",
+  "sphinxcontrib-devhelp < 1.0.6",
+  "sphinxcontrib-htmlhelp < 2.0.5",
+  "sphinxcontrib-serializinghtml < 1.1.10",
+  "sphinxcontrib-qthelp < 1.0.7",
 ]
 requires-python = ">= 3.6"
 classifiers = [
