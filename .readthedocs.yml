@@ -6,9 +6,9 @@ submodules:
 python:
   version: 3
   install:
-    - requirements: doc/requirements.txt
     - method: pip
       path: .
+    - requirements: doc/requirements.txt
   system_packages: true
 formats:
   - htmlzip
