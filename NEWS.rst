@@ -1,3 +1,10 @@
+Version 0.3.1 -- 2022-06-06 -- docs__ -- PyPI__ -- diff__
+ * CSS: Support for aside.topic (docutils 0.18+)
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.3.1/
+__ https://pypi.org/project/insipid-sphinx-theme/0.3.1/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.3.0...0.3.1
+
 Version 0.3.0 -- 2022-05-08 -- docs__ -- PyPI__ -- diff__
  * Toggleable sidebar without JavaScript
  * Allow wrapping of long inline literals
