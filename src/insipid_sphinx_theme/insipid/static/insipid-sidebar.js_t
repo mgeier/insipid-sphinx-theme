@@ -98,17 +98,28 @@
     document.addEventListener('touchstart', event => {
         if (event.touches.length > 1) { return; }
         const touch = event.touches[0];
-        {%- if theme_rightsidebar|tobool %}
-        if (touch.clientX >= window.innerWidth - sidebar.offsetWidth) {
-        {%- else %}
-        if (touch.clientX <= sidebar.offsetWidth) {
-        {%- endif %}
-            touchstart = {
-                x: touch.clientX,
-                y: touch.clientY,
-                t: Date.now(),
-            };
+        if (sidebar_checkbox.checked) {
+            {%- if theme_rightsidebar|tobool %}
+            if (touch.clientX < window.innerWidth - sidebar.offsetWidth) {
+            {%- else %}
+            if (touch.clientX > sidebar.offsetWidth) {
+            {%- endif %}
+                return;
+            }
+        } else {
+            {%- if theme_rightsidebar|tobool %}
+            if (touch.clientX < window.innerWidth - 20) {
+            {%- else %}
+            if (touch.clientX > 20) {
+            {%- endif %}
+                return;
+            }
         }
+        touchstart = {
+            x: touch.clientX,
+            y: touch.clientY,
+            t: Date.now(),
+        };
     });
 
     document.addEventListener('touchend', event => {
