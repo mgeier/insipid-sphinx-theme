@@ -210,21 +210,22 @@ section > hr.docutils {
     margin-right: -7px;
 }
 
-div.compound {
+div.compound:not(.toctree-wrapper) {
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-div.compound > .compound-first {
+div.compound:not(.toctree-wrapper) > * {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+div.compound:not(.toctree-wrapper) > *:first-child {
     margin-top: 0;
     margin-bottom: 0.2em;
 }
 
-div.compound > .compound-middle {
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-}
-div.compound > .compound-last {
+div.compound:not(.toctree-wrapper) > *:last-child {
     margin-top: 0.2em;
     margin-bottom: 0;
 }
