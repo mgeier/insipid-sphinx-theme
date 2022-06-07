@@ -320,6 +320,10 @@ div.code-block-caption {
     font-size: unset;
 }
 
+div.literal-block-wrapper {
+    clear: both;
+}
+
 td.linenos .linenodiv pre {
     color: #666;
     background-color: transparent;
