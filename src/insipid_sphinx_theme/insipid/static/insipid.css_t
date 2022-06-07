@@ -359,8 +359,10 @@ table.autosummary span.pre {
 /* -- admonitions ----------------------------------------------------------- */
 
 div.topic, aside.topic,
-div.sidebar, aside.sidebar {
+div.sidebar, aside.sidebar,
+nav.contents {
     border: none;
+    padding: 7px;
 }
 
 .section > div.admonition,
@@ -368,7 +370,10 @@ section > div.admonition,
 div.body > div.admonition,
 .section > .topic,
 section > .topic,
-div.body > .topic {
+div.body > .topic,
+.section > nav.contents,
+section > nav.contents,
+div.body > nav.contents {
     margin: 10px -7px;
 }
 
@@ -379,6 +384,7 @@ aside.sidebar {
 
 div.admonition > p.admonition-title,
 .topic > p.topic-title,
+nav.contents > p.topic-title,
 .sidebar > p.sidebar-title {
     margin: -7px -7px 7px -7px;
     padding: 4px 7px;
@@ -396,14 +402,20 @@ div.admonition > p.admonition-title,
 
 div.admonition > p.admonition-title + *,
 .topic > p.topic-title + *,
+nav.contents > p.topic-title + *,
 .sidebar > p.sidebar-title + * {
     margin-top: 0;
 }
 
 div.admonition > :first-child:not(.admonition-title),
 div.topic > :first-child:not(.topic-title),
-aside.topic > :first-child:not(.topic-title) {
+aside.topic > :first-child:not(.topic-title),
+nav.contents > :first-child:not(.topic-title) {
     margin-top: 0;
+}
+
+nav.contents > :last-child {
+    margin-bottom: 0;
 }
 
 div.admonition {
@@ -430,11 +442,12 @@ div.admonition.warning > p.admonition-title {
     background-color: #f0d5b8;
 }
 
-div.topic, aside.topic {
+div.topic, nav.contents, aside.topic {
     background-color: #fff0eb;
 }
 
-.topic > p.topic-title {
+.topic > p.topic-title,
+nav.contents > p.topic-title {
     background-color: #f0dbd4;
 }
 
