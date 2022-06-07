@@ -492,7 +492,7 @@ div.body .sidebar dl:not(.glossary) > dt {
 
 table.docutils {
     border-collapse: separate;
-    border-spacing: 5px 0px;
+    border-spacing: 4px 4px;
 }
 
 table.docutils th {
