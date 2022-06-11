@@ -356,10 +356,6 @@ span.pre {
     overflow-wrap: anywhere;
 }
 
-table.autosummary span.pre {
-    overflow-wrap: break-word;
-}
-
 /* -- admonitions ----------------------------------------------------------- */
 
 div.topic, aside.topic,
@@ -499,6 +495,10 @@ table.docutils th {
     font-weight: normal;
     background-color: rgba(27,31,35,.05);
     border-bottom: 2px solid #333;
+}
+
+table.docutils td {
+    overflow-wrap: break-word;
 }
 
 {% if not html5_doctype %}
