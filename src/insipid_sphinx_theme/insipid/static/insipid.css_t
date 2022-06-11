@@ -179,10 +179,6 @@ blockquote p.attribution {
     text-align: end;
 }
 
-div.insipid-horizontally-scrollable {
-    overflow-x: auto;
-}
-
 div.body a:target,
 strong:target {
     padding: 3px;
@@ -487,8 +483,12 @@ div.body .sidebar dl:not(.glossary) > dt {
 /* -- tables and lists ------------------------------------------------------ */
 
 table.docutils {
+    overflow-x: auto;
+    display: block;
     border-collapse: separate;
     border-spacing: 4px 4px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 table.docutils th {

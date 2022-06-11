@@ -4,7 +4,7 @@
     } else {
         dom_loaded();
     }
-})(() => { 
+})(() => {
     'use strict';
 
     // make sure all scripts are re-executed when navigating to cached page
@@ -12,16 +12,6 @@
 
     const topbar = document.getElementById('topbar');
     const topbar_placeholder = document.getElementById('topbar-placeholder');
-
-    // make large tables horizontally scrollable
-    document.querySelectorAll(
-        'table.docutils:not(.field-list,.footnote,.citation)'
-    ).forEach(el => {
-        const wrapper = document.createElement('div');
-        wrapper.classList.add('insipid-horizontally-scrollable');
-        el.parentNode.insertBefore(wrapper, el);
-        wrapper.appendChild(el);
-    });
 
     const threshold = 10;
 
