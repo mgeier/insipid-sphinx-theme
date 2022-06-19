@@ -1,3 +1,11 @@
+Version 0.3.2 -- 2022-06-19 -- docs__ -- PyPI__ -- diff__
+ * More CSS fixes for docutils 0.18+
+ * CSS improvements for tables
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.3.2/
+__ https://pypi.org/project/insipid-sphinx-theme/0.3.2/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.3.1...0.3.2
+
 Version 0.3.1 -- 2022-06-06 -- docs__ -- PyPI__ -- diff__
  * CSS: Support for aside.topic (docutils 0.18+)
 
