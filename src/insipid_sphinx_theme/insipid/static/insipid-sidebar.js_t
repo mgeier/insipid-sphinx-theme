@@ -4,7 +4,7 @@
     } else {
         dom_loaded();
     }
-})(() => { 
+})(() => {
     'use strict';
 
     const sidebar = document.querySelector('.sphinxsidebar');
@@ -270,7 +270,17 @@
     window.requestAnimationFrame(setResizeObserver);
 {%- endif %}
 
-    const current = Array.from(document.querySelectorAll('.sphinxsidebar *')).filter(el => el.querySelector(':scope > a[href^="#"]'));
+    let current = [];
+    let links = [];
+
+    document.querySelectorAll('.sphinxsidebar *').forEach(el => {
+        let link = el.querySelector(':scope > a[href^="#"]');
+        if (link) {
+            el.classList.add('current-page');
+            current.push(el);
+            links.push(link);
+        }
+    });
 
 {%- if theme_sidebar_overlay_width != None %}
     const small_screen = window.matchMedia('(max-width: {{ theme_sidebar_overlay_width|todim }})');
@@ -288,10 +298,41 @@
         }
     }
 
-    current.forEach(el => {
-        el.classList.add('current-page');
+    let sections = new Map();
+
+    const intersection_callback = (entries, observer) => {
+        entries.forEach(entry => {
+            let link = sections.get(entry.target);
+            if (entry.isIntersecting) {
+                link.classList.add('in-view');
+            } else {
+                link.classList.remove('in-view');
+            }
+        });
+    };
+
+    const intersection_observer = new IntersectionObserver(intersection_callback, {
+        root: null,
+        // NB: This uses the initial topbar height, later changes are ignored:
+        rootMargin: -topbar.offsetHeight + 'px 0px 0px 0px',
+        threshold: 0.0,
+    });
+
+    links.forEach(link => {
+        let section;
+        let id = link.hash;
+        if (id) {
+            id = id.slice(1);
+            section = document.getElementById(decodeURI(id));
+        } else {
+            // NB: The first section has no hash, so we don't know its ID:
+            section = document.querySelector('div.body .section, div.body section');
+        }
+        sections.set(section, link);
+        intersection_observer.observe(section);
+
 {%- if theme_sidebar_overlay_width != None %}
-        el.querySelector(':scope > a').addEventListener('click', event => {
+        link.addEventListener('click', event => {
             if (small_screen.matches) {
                 hide();
             }

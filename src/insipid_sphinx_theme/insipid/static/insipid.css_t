@@ -856,6 +856,11 @@ div.sphinxsidebar a {
     color: #004188;
 }
 
+div.sphinxsidebar a.in-view {
+    font-style: italic;
+    font-weight: 600;
+}
+
 div.sphinxsidebar code {
     background-color: unset;
     padding: 0;
