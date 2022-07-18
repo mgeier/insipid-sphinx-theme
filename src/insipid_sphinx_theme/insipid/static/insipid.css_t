@@ -307,6 +307,10 @@ code.descname {
     font-size: unset;
 }
 
+.sig-name {
+	font-size: unset;
+}
+
 .sig-paren,
 .optional {
     line-height: 0;
