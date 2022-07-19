@@ -388,16 +388,30 @@ A link: :func:`insipid_sphinx_theme.setup`.
 .. automodule:: insipid_sphinx_theme
     :members:
 
+****
+
+.. automodule:: example_module
+    :members:
+
+
 ``sphinx.ext.autosummary``
 --------------------------
 
+.. warning::
+
+    With ``docutils`` versions older than 0.18, the HTML line breaks in the left
+    column are not working correctly.  Make sure to use at least
+    ``docutils >= 0.18``, which is supported since Sphinx version 5.0.
+
 .. autosummary::
 
-   setup
+    a_very_useful_function
+    TheBestClass
 
 ``:nosignatures:``
 
 .. autosummary::
-   :nosignatures:
+    :nosignatures:
 
-   setup
+    a_very_useful_function
+    TheBestClass

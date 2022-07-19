@@ -125,6 +125,16 @@ intersphinx_mapping = {
     'sphinx': ('https://www.sphinx-doc.org/', None),
 }
 
+# -- Set path for example_module.py -------------------------------------------
+
+# Normally, this is not necessary, because you should properly install
+# your Python module before running Sphinx.
+
+import os
+import sys
+
+sys.path.append(os.path.abspath('.'))
+
 # -- Get version information from Git -----------------------------------------
 
 try:
