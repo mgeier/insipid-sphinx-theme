@@ -23,7 +23,8 @@ setup(
     ]},
     python_requires='>=3.6',
     install_requires=[
-        'sphinx>=3.1.2',
+        'sphinx>=5',
+        'docutils>=0.18',
         'jinja2>=2.11',  # suport for pathlib.Path
     ],
     author='Matthias Geier',
