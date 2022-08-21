@@ -1,3 +1,15 @@
+Version 0.3.3 -- 2022-08-21 -- docs__ -- PyPI__ -- diff__
+ * Require Sphinx 5.0, older versions can be used with ``--no-deps``
+ * CSS: do not increase font size for code in definition titles
+ * Make tables scrollable with "display: block"
+ * Sidebar: show which sections are in view
+ * Require swipe gesture to start at the margin
+ * Replace all remaining jQuery code with vanilla JavaScript
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.3.3/
+__ https://pypi.org/project/insipid-sphinx-theme/0.3.3/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.3.2...0.3.3
+
 Version 0.3.2 -- 2022-06-19 -- docs__ -- PyPI__ -- diff__
  * More CSS fixes for docutils 0.18+
  * CSS improvements for tables
