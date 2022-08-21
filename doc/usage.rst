@@ -14,6 +14,18 @@ Installation and Usage
     If you have installed the module already,
     you can use the ``--upgrade`` flag to get the newest release.
 
+    .. note::
+
+        By default, a recent Sphinx version is required and automatically
+        installed when installing ``insipid-sphinx-theme``.
+        Older Sphinx versions are supported to some degree
+        (some features might not be rendered as in newer versions, see
+        https://insipid-sphinx-theme.readthedocs.io/en/sphinx3/ and
+        https://insipid-sphinx-theme.readthedocs.io/en/sphinx4/),
+        but those older versions have to be installed manually
+        and ``insipid-sphinx-theme`` has to be installed
+        with the ``--no-deps`` flag.
+
 #.  Edit the :file:`conf.py` file
     (just create an empty file if it doesn't exist yet,
     or use :doc:`sphinx:man/sphinx-quickstart`) and add/edit the line:
