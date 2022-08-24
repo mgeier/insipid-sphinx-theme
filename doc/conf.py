@@ -34,6 +34,7 @@ html_theme_options = {
     #'body_centered': False,
     #'body_max_width': None,
     #'breadcrumbs': True,
+    #'enable_search_shortcuts': False,
     #'globaltoc_collapse': False,
     #'globaltoc_includehidden': True,
     #'initial_sidebar_visibility_threshold': None,
