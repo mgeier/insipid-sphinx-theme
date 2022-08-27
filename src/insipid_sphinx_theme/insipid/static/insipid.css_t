@@ -861,8 +861,8 @@ div.sphinxsidebar a {
 }
 
 div.sphinxsidebar a.in-view {
-    font-style: italic;
     font-weight: 600;
+    letter-spacing: -0.013em;
 }
 
 div.sphinxsidebar code {
