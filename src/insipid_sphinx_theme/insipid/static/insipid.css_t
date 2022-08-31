@@ -737,12 +737,14 @@ div.sphinxsidebar {
 
 #sidebar-checkbox:checked ~ div.document,
 #sidebar-checkbox:checked ~ .relbar,
+#sidebar-checkbox:checked ~ .articleComments,
 #sidebar-checkbox:checked ~ footer {
     margin-{{ sidebar_side }}: var(--sidebar-width);
 }
 
 body:not(.sidebar-resizing) div.document,
 body:not(.sidebar-resizing) .relbar,
+body:not(.sidebar-resizing) .articleComments,
 body:not(.sidebar-resizing) footer {
     transition: margin-{{ sidebar_side }} {{ theme_sidebar_transition }};
 }
@@ -1174,6 +1176,7 @@ div.viewcode-block:target {
 @media only screen and (max-width: {{ theme_sidebar_overlay_width|todim }}) {
     #sidebar-checkbox:checked ~ div.document,
     #sidebar-checkbox:checked ~ .relbar,
+    #sidebar-checkbox:checked ~ .articleComments,
     #sidebar-checkbox:checked ~ footer {
         margin-{{ sidebar_side }}: 0;
     }
