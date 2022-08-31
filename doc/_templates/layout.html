@@ -1,0 +1,14 @@
+{% extends "!layout.html" %}
+
+{% block comments %}
+{% if sourcename is defined %}
+<script src="https://utteranc.es/client.js"
+        repo="mgeier/insipid-sphinx-theme"
+        issue-term="url"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+{% endif %}
+{% endblock %}
