@@ -1,7 +1,16 @@
+Version 0.3.4 -- 2022-09-03 -- docs__ -- PyPI__ -- diff__
+ * CSS: Avoid sidebar overlapping the comment section
+ * CSS: remove ``italic`` from ``in-view``, reduce ``letter-spacing`` instead
+ * Support for ``/`` key binding
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.3.4/
+__ https://pypi.org/project/insipid-sphinx-theme/0.3.4/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.3.3...0.3.4
+
 Version 0.3.3 -- 2022-08-21 -- docs__ -- PyPI__ -- diff__
  * Require Sphinx 5.0, older versions can be used with ``--no-deps``
  * CSS: do not increase font size for code in definition titles
- * Make tables scrollable with "display: block"
+ * Make tables scrollable with ``display: block``
  * Sidebar: show which sections are in view
  * Require swipe gesture to start at the margin
  * Replace all remaining jQuery code with vanilla JavaScript
