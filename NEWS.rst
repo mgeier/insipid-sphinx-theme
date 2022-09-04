@@ -1,9 +1,15 @@
-Version 0.3.4 -- 2022-09-03 -- docs__ -- PyPI__ -- diff__
+Version 0.3.5 -- 2022-09-04 -- docs__ -- PyPI__ -- diff__
+ * Re-release for updating the ``issue-term`` of the comment system
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.3.5/
+__ https://pypi.org/project/insipid-sphinx-theme/0.3.5/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.3.4...0.3.5
+
+Version 0.3.4 -- 2022-09-03 -- PyPI__ -- diff__
  * CSS: Avoid sidebar overlapping the comment section
  * CSS: remove ``italic`` from ``in-view``, reduce ``letter-spacing`` instead
  * Support for ``/`` key binding
 
-__ https://insipid-sphinx-theme.readthedocs.io/en/0.3.4/
 __ https://pypi.org/project/insipid-sphinx-theme/0.3.4/
 __ https://github.com/mgeier/insipid-sphinx-theme/compare/0.3.3...0.3.4
 
