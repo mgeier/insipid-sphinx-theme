@@ -4,7 +4,7 @@
 {% if sourcename is defined %}
 <script src="https://utteranc.es/client.js"
         repo="mgeier/insipid-sphinx-theme"
-        issue-term="comments:{{ pagename|e }}"
+        issue-term="comments:{{ pagename|urlencode }}"
         label="comments"
         theme="preferred-color-scheme"
         crossorigin="anonymous"
