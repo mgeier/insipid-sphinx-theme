@@ -5,7 +5,7 @@
 
 html_theme = 'insipid'
 
-html_permalinks_icon = '§'
+html_permalinks_icon = '#'
 
 # -- Recommended settings for readthedocs.org ---------------------------------
 

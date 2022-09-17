@@ -8,6 +8,23 @@ only a single setting is required in your :file:`conf.py`:
 
     html_theme = 'insipid'
 
+However, you may also want to change the default symbol for section title links
+from the default ¶ to something more meaningful like # or § or maybe 🔗:
+
+.. code-block:: python
+
+    html_permalinks_icon = '#'
+
+And if you happen to host your documentation on https://readthedocs.org/
+and your sources on Bitbucket, Github or GitLab, you should set:
+
+.. code-block:: python
+
+    html_copy_source = False
+
+This way, you will get automatic source links in the page footer.
+See :confval:`html_show_sourcelink` for details.
+
 
 Theme Settings
 --------------
