@@ -1,3 +1,10 @@
+Version 0.3.6 -- 2022-11-13 -- docs__ -- PyPI__ -- diff__
+ * IntersectionObserver: support for domain object headers
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.3.6/
+__ https://pypi.org/project/insipid-sphinx-theme/0.3.6/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.3.5...0.3.6
+
 Version 0.3.5 -- 2022-09-04 -- docs__ -- PyPI__ -- diff__
  * Re-release for updating the ``issue-term`` of the comment system
 
