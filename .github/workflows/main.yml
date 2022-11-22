@@ -7,12 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Clone repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
         submodules: true
     - name: Set up Python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v4
       with:
         python-version: "3.10"
     - name: Double-check Python version
@@ -37,7 +37,7 @@ jobs:
       run: |
         python -m sphinx -W --keep-going --color -d _build/doctrees/ doc/ _build/linkcheck/ -b linkcheck
     - name: Upload linkcheck results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: ${{ success() || failure() }}
       with:
         name: linkcheck
