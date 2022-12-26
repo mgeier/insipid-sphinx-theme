@@ -242,34 +242,6 @@
         resizeObserver.observe(topbar);
     }
 
-{%- if READTHEDOCS|tobool %}
-    function setResizeObserver() {
-        const badge = document.querySelector('.rst-versions.rst-badge');
-        if (badge === null) {
-            console.log('waiting for readthedocs.org badge');
-            window.requestAnimationFrame(setResizeObserver);
-        } else {
-            if (window.ResizeObserver) {
-                const resizeObserver = new ResizeObserver(entries => {
-                    for (let entry of entries) {
-                        let height;
-                        if (entry.borderBoxSize && entry.borderBoxSize.length > 0) {
-                            height = entry.borderBoxSize[0].blockSize;
-                        } else {
-                            height = entry.contentRect.height;
-                        }
-                        root.css('--readthedocs-badge-height', height + 'px');
-                    }
-                });
-                resizeObserver.observe(badge);
-            } else {
-                root.css('--readthedocs-badge-height', badge.offsetHeight + 'px');
-            }
-        }
-    };
-    window.requestAnimationFrame(setResizeObserver);
-{%- endif %}
-
     let current = [];
     let links = [];
 
@@ -290,10 +262,16 @@
     }
 {%- endif %}
 
+{%- if READTHEDOCS|tobool %}
+    const bottom_space = 42;
+{%- else %}
+    const bottom_space = 0;
+{%- endif %}
+
     if (current.length) {
         const top = current[0].getBoundingClientRect().top;
         const bottom = current[current.length - 1].getBoundingClientRect().bottom;
-        if (top < topbar.offsetHeight || bottom > sidebar.offsetHeight) {
+        if (top < topbar.offsetHeight || bottom > (sidebar.offsetHeight - bottom_space)) {
             current[0].scrollIntoView(true);
         }
     }
@@ -347,9 +325,17 @@
             if (small_screen.matches) {
                 hide();
             }
-        })
+        });
 {%- endif %}
     });
+
+{%- if READTHEDOCS|tobool %}
+    const rtd_current_version = document.getElementById('duplicated-readthedocs-versions');
+    const rtd_other_versions = document.getElementById('readthedocs-embed-flyout');
+    rtd_current_version.addEventListener('click', event => {
+        rtd_other_versions.scrollIntoView(true);
+    });
+{%- endif %}
 });
 
 {#

@@ -1,0 +1,12 @@
+{# We duplicate "rst-current-version" to be able to make it sticky. #}
+{# It is initially invisible and will be enabled via JavaScript below. #}
+<div id="duplicated-readthedocs-versions" class="rst-versions" role="note" style="display: none;">
+  <span class="rst-current-version">
+    <span class="fa fa-book"> Read the Docs</span>
+    {{ current_version }}
+  </span>
+</div>
+{# Only show when JavaScript is enabled: #}
+<script>document.currentScript.previousElementSibling.style.display = 'block';</script>
+{# This is where https://readthedocs.org/ injects the version/language switcher #}
+<div id="readthedocs-embed-flyout"></div>

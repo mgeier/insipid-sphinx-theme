@@ -74,7 +74,8 @@ div.sphinxsidebar {
 }
 
 {%- if READTHEDOCS|tobool %}
-.injected .rst-versions.shift-up {
+/* These settings are only relevant for pages without a sidebar: */
+body > .injected .rst-versions.shift-up {
     max-height: calc(100vh - var(--topbar-height) - 50px);
     overflow-y: auto;
     overscroll-behavior: contain;
@@ -82,17 +83,17 @@ div.sphinxsidebar {
     scrollbar-color: #ccc transparent;
 }
 
-.rst-versions.shift-up .rst-current-version {
+body > .injected .rst-versions.shift-up .rst-current-version {
     position: sticky;
     top: 0;
 }
 
-.injected .rst-versions.shift-up::-webkit-scrollbar {
+body > .injected .rst-versions.shift-up::-webkit-scrollbar {
     width: 7px;
     background: transparent;
 }
 
-.injected .rst-versions.shift-up::-webkit-scrollbar-thumb {
+body > .injected .rst-versions.shift-up::-webkit-scrollbar-thumb {
     background: #ccc;
 }
 {%- endif %}
@@ -729,6 +730,7 @@ div.sphinxsidebar {
     overflow-y: auto;
     float: unset;
     margin-left: unset;  /* override basic.css */
+    padding-top: var(--topbar-height);
     z-index: 390;
     color: #333;
     background-color: #f5f5f5;
@@ -755,8 +757,11 @@ body:not(.sidebar-resizing) .sphinxsidebar {
 
 div.sphinxsidebarwrapper {
     position: relative;  /* reference for sidebar-resize-handle */
-    margin-top: var(--topbar-height);
+    box-sizing: border-box;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 div.sphinxsidebarwrapper > :first-child {
