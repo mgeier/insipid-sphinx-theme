@@ -1,3 +1,10 @@
+Version 0.4.0 -- 2022-12-29 -- docs__ -- PyPI__ -- diff__
+ * Include readthedocs.org version selector in scrollable sidebar
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.4.0/
+__ https://pypi.org/project/insipid-sphinx-theme/0.4.0/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.3.6...0.4.0
+
 Version 0.3.6 -- 2022-11-13 -- docs__ -- PyPI__ -- diff__
  * IntersectionObserver: support for domain object headers
 
