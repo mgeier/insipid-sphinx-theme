@@ -33,6 +33,7 @@
     showcase/math
     showcase/api-doc
     showcase/sections
+    showcase/different-sidebar
     showcase/no-sidebar
 
 ----

@@ -62,7 +62,11 @@ html_sidebars = {
        'separator.html',
        'indices.html',
    ],
-   'showcase/no-sidebar': [],  # To demonstrate a page without a sidebar
+   'showcase/different-sidebar': [
+       'localtoc.html',
+       'searchbox.html',
+   ],
+   'showcase/no-sidebar': [],
 }
 
 html_static_path = ['_static']
