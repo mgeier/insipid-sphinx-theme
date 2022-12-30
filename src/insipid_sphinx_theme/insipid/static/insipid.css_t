@@ -863,7 +863,7 @@ div.sphinxsidebar ul ul {
     list-style: unset;
 }
 
-div.sphinxsidebar a {
+.sphinxsidebar a {
     color: #004188;
 }
 
