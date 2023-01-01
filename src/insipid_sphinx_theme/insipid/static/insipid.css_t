@@ -153,7 +153,7 @@ a.headerlink {
 }
 
 blockquote {
-    clear: left;
+    clear: inline-start;
     margin: 10px 0;
     border: 1px solid #0002;
     border-left-width: 7px;
@@ -225,6 +225,10 @@ section > hr.docutils {
 .compound:not(.toctree-wrapper) > *:last-child {
     margin-top: 0.2em;
     margin-bottom: 0;
+}
+
+section, .section {
+    clear: inline-start;
 }
 
 /* -- hyperlink styles ------------------------------------------------------ */
