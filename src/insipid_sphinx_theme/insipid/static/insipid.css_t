@@ -199,6 +199,7 @@ strong:target {
 hr.docutils {
     border: 0;
     border-top: solid 1px #ccc;
+    width: 100%;
 }
 
 .section > hr.docutils,
