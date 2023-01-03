@@ -6,6 +6,7 @@
 
 .. toctree::
     :caption: Part One – Documentation
+    :maxdepth: 2
 
     intro
     usage
@@ -21,6 +22,7 @@
 .. toctree::
     :caption: Part Two – Showcase
     :numbered:
+    :maxdepth: 1
 
     showcase/index
     showcase/basic-formatting

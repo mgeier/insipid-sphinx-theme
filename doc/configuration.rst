@@ -394,4 +394,4 @@ You can look at the :file:`conf.py` file of this very documentation:
     :caption: :file:`conf.py` of the ``insipid`` docs
     :linenos:
     :language: python
-    :end-before: Get version information from Git
+    :end-before: Set path for example_module.py
