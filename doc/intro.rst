@@ -106,16 +106,12 @@ back to the ``basic``\s
     (sprinkled with a pinch of Jinja2_ markup).
     Plus a few SVG icons from `Font Awesome`_
     (embedded in the HTML files -- no external assets).
-    No external JavaScript framework is used
-    (except for jQuery_ and underscore.js_,
-    which are already part of the ``basic`` theme),
+    No external JavaScript framework is used,
     and no extension-specific Python code is ever executed
     (you can check the source code of :func:`insipid_sphinx_theme.setup`).
 
     .. _Jinja2: https://palletsprojects.com/p/jinja/
     .. _Font Awesome: https://fontawesome.com/
-    .. _jQuery: https://jquery.com/
-    .. _underscore.js: https://underscorejs.org/
 
 
 Features
