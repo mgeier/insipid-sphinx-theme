@@ -19,21 +19,21 @@ jobs:
       run: |
         python --version
     - name: Install Python package
-      env:
-        # Sphinx creates deprecation warnings: https://github.com/sphinx-doc/sphinx/issues/9820
-        PYTHONWARNINGS: error,default::DeprecationWarning
       run: |
         python -m pip install .
     - name: Install docs dependencies
-      env:
-        # See above, Sphinx is again a (transitive) dependency
-        PYTHONWARNINGS: error,default::DeprecationWarning
       run: |
         python -m pip install -r doc/requirements.txt
     - name: Build HTML
+      env:
+        # sphinxcontrib-htmlhelp creates deprecation warnings: https://github.com/sphinx-doc/sphinx/issues/11127
+        PYTHONWARNINGS: error,ignore::PendingDeprecationWarning
       run: |
         python -m sphinx -W --keep-going --color -d _build/doctrees/ doc/ _build/html/ -b html
     - name: Check links
+      env:
+        # See above
+        PYTHONWARNINGS: error,ignore::PendingDeprecationWarning
       run: |
         python -m sphinx -W --keep-going --color -d _build/doctrees/ doc/ _build/linkcheck/ -b linkcheck
     - name: Upload linkcheck results
