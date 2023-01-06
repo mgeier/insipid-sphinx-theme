@@ -44,12 +44,13 @@ div.body {
 /* -- scrollbars ------------------------------------------------------------ */
 
 html::-webkit-scrollbar, div.sphinxsidebar::-webkit-scrollbar {
-    width: 14px;
-    background: transparent;
+    width: 12px;
+    background-color: #fff;
 }
 
 html::-webkit-scrollbar-thumb, div.sphinxsidebar::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background-color: #ccc;
+    border-radius: 6px;
 }
 
 html, div.sphinxsidebar {
@@ -62,11 +63,10 @@ body {
 
 div.sphinxsidebar::-webkit-scrollbar {
     width: 7px;
-    background: transparent;
 }
 
 div.sphinxsidebar::-webkit-scrollbar-thumb {
-    background: #ccc;
+    border-radius: 3.5px;
 }
 
 div.sphinxsidebar {
@@ -94,6 +94,7 @@ body > .injected .rst-versions.shift-up::-webkit-scrollbar {
 }
 
 body > .injected .rst-versions.shift-up::-webkit-scrollbar-thumb {
+    border-radius: 3.5px;
     background: #ccc;
 }
 {%- endif %}
