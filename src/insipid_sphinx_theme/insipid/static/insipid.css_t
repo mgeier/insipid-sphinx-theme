@@ -690,6 +690,10 @@ div.body dl.exception > dt:not(:target) {
     line-height: 0.5em;
 }
 
+.relbar .pre {
+    white-space: pre;
+}
+
 /* -- breadcrumbs ----------------------------------------------------------- */
 
 nav.crumbs {
