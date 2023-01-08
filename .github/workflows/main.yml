@@ -27,9 +27,6 @@ jobs:
       run: |
         $PIP install -r doc/requirements.txt
     - name: Build HTML
-      env:
-        # sphinxcontrib-htmlhelp creates deprecation warnings: https://github.com/sphinx-doc/sphinx/issues/11127
-        PYTHONWARNINGS: error,ignore::PendingDeprecationWarning
       run: |
         $SPHINX -d _build/doctrees/ doc/ _build/html/ -b html
     - name: Upload error log
@@ -39,9 +36,6 @@ jobs:
         name: build-log
         path: /tmp/sphinx-err-*.log
     - name: Check links
-      env:
-        # See above
-        PYTHONWARNINGS: error,ignore::PendingDeprecationWarning
       run: |
         $SPHINX -d _build/doctrees/ doc/ _build/linkcheck/ -b linkcheck
     - name: Upload linkcheck results
