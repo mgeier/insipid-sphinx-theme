@@ -104,7 +104,7 @@ one could create a customized note by replacing the existing template
     <a href="https://creativecommons.org/publicdomain/zero/1.0/"
        class="reference external">CC0 1.0</a>.
 
-For further information, see :doc:`sphinx:templating`.
+For further information, see :ref:`sphinx:templating`.
 
 
 Custom SVG Icons

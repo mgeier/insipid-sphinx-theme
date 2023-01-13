@@ -164,7 +164,7 @@ See below for `default values`_.
         }
         templates_path = ['_templates']
 
-    For help creating your own templates, see :doc:`sphinx:templating`.
+    For help creating your own templates, see :ref:`sphinx:templating`.
 
 .. theme-option:: right_buttons
 
