@@ -332,8 +332,13 @@
 {%- if READTHEDOCS|tobool %}
     const rtd_current_version = document.getElementById('duplicated-readthedocs-versions');
     const rtd_other_versions = document.getElementById('readthedocs-embed-flyout');
+    const sidebarwrapper = document.querySelector('.sphinxsidebarwrapper');
     rtd_current_version.addEventListener('click', event => {
-        rtd_other_versions.scrollIntoView(true);
+        if (sidebar.scrollTop >= sidebar.scrollHeight - sidebar.clientHeight) {
+            sidebarwrapper.scrollIntoView(true);
+        } else {
+            rtd_other_versions.scrollIntoView(true);
+        }
     });
 {%- endif %}
 });

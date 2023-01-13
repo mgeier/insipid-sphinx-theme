@@ -11,7 +11,7 @@
     margin-right: -10px;
 }
 
-#readthedocs-embed-flyout {
+#duplicated-readthedocs-versions {
     margin-bottom: -10px;
 }
 
