@@ -335,9 +335,9 @@
     const sidebarwrapper = document.querySelector('.sphinxsidebarwrapper');
     rtd_current_version.addEventListener('click', event => {
         if (rtd_other_versions.offsetTop - 1 < sidebar.scrollTop || sidebar.scrollTop + 1 > sidebar.scrollHeight - sidebar.offsetHeight) {
-            sidebarwrapper.scrollIntoView(true);
+            sidebar.scroll({top: 0, behavior:'smooth'});
         } else {
-            rtd_other_versions.scrollIntoView(true);
+            sidebar.scroll({top: rtd_other_versions.offsetTop, behavior:'smooth'});
         }
     });
 {%- endif %}
