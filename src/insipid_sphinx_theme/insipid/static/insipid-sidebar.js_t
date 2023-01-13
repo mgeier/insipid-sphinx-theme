@@ -334,7 +334,7 @@
     const rtd_other_versions = document.getElementById('readthedocs-embed-flyout');
     const sidebarwrapper = document.querySelector('.sphinxsidebarwrapper');
     rtd_current_version.addEventListener('click', event => {
-        if (rtd_other_versions.offsetTop - 1 < sidebar.scrollTop || sidebar.scrollTop + 1 > sidebar.scrollHeight - sidebar.offsetHeight) {
+        if (sidebar.scrollTop + 1 > rtd_other_versions.offsetTop || sidebar.scrollTop + 1 > sidebar.scrollHeight - sidebar.offsetHeight) {
             sidebar.scroll({top: 0, behavior:'smooth'});
         } else {
             sidebar.scroll({top: rtd_other_versions.offsetTop, behavior:'smooth'});
