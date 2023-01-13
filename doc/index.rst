@@ -40,6 +40,8 @@
 
 ----
 
-:ref:`genindex`
+.. toctree::
+    :caption: Indices
 
-:ref:`py-modindex`
+    genindex
+    modindex

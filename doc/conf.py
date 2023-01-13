@@ -59,8 +59,6 @@ html_sidebars = {
        'github-badge.html',  # Custom template, see _templates/
        'home.html',
        'globaltoc.html',
-       'separator.html',
-       'indices.html',
    ],
    'showcase/different-sidebar': [
        'localtoc.html',
