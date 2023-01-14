@@ -170,13 +170,13 @@ keyboard navigation
         Web/HTML/Global_attributes/accesskey
 
     The following access keys are available in many Sphinx themes:
-    :kbd:`N` for the *next* page;
-    :kbd:`P` for the *previous* page;
-    :kbd:`U` for *up* (to the parent page);
-    :kbd:`I` for the *index*.
+    :kbd:`n` for the *next* page;
+    :kbd:`p` for the *previous* page;
+    :kbd:`u` for *up* (to the parent page);
+    :kbd:`i` for the *index*.
     In addition to these, the ``insipid`` theme provides
-    :kbd:`S` to show/hide the *search* field and
-    :kbd:`M` for showing/hiding the sidebar (i.e. the *menu*).
+    :kbd:`s` to show/hide the *search* field and
+    :kbd:`m` for showing/hiding the sidebar (i.e. the *menu*).
 
 fullscreen mode
     When supported by the browser
