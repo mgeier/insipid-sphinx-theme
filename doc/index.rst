@@ -2,11 +2,15 @@
 
 ----
 
+.. raw:: html
+
+    <details>
+    <summary>click here to see full table of contents</summary>
+
 .. NB: "--" is not replaced in :caption:!
 
 .. toctree::
     :caption: Part One – Documentation
-    :maxdepth: 2
 
     intro
     usage
@@ -22,7 +26,6 @@
 .. toctree::
     :caption: Part Two – Showcase
     :numbered:
-    :maxdepth: 1
 
     showcase/index
     showcase/basic-formatting
@@ -43,3 +46,7 @@
 :ref:`genindex`
 
 :ref:`py-modindex`
+
+.. raw:: html
+
+    </details>
