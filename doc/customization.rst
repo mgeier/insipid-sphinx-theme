@@ -27,11 +27,6 @@ Custom JavaScript Files
 Similarly, you can add JavaScript files located in the
 :confval:`html_static_path` by adding their paths to :confval:`html_js_files`.
 
-The JavaScript frameworks jQuery_ and underscore.js_ are available
-(using ``$`` and ``$u``, respectively).
-
-.. _jQuery: https://jquery.com/
-.. _underscore.js: https://underscorejs.org/
 
 Custom Templates
 ----------------
