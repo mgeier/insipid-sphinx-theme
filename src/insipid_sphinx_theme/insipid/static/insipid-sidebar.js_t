@@ -332,8 +332,13 @@
 {%- if READTHEDOCS|tobool %}
     const rtd_current_version = document.getElementById('duplicated-readthedocs-versions');
     const rtd_other_versions = document.getElementById('readthedocs-embed-flyout');
+    const sidebarwrapper = document.querySelector('.sphinxsidebarwrapper');
     rtd_current_version.addEventListener('click', event => {
-        rtd_other_versions.scrollIntoView(true);
+        if (sidebar.scrollTop + 1 > rtd_other_versions.offsetTop || sidebar.scrollTop + 1 > sidebar.scrollHeight - sidebar.offsetHeight) {
+            sidebar.scroll({top: 0, behavior:'smooth'});
+        } else {
+            sidebar.scroll({top: rtd_other_versions.offsetTop, behavior:'smooth'});
+        }
     });
 {%- endif %}
 });
