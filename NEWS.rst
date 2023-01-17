@@ -1,3 +1,13 @@
+Version 0.4.1 -- 2023-01-17 -- docs__ -- PyPI__ -- diff__
+ * Close search field with "Escape" key
+ * CSS: rounded scrollbar thumbs on Webkit
+ * CSS: fine-tuning of the readthedocs.org version selector
+ * more CSS fixes: footnote/citation targets, prev/next links, ...
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.4.1/
+__ https://pypi.org/project/insipid-sphinx-theme/0.4.1/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.4.0...0.4.1
+
 Version 0.4.0 -- 2022-12-29 -- docs__ -- PyPI__ -- diff__
  * Include readthedocs.org version selector in scrollable sidebar
 
