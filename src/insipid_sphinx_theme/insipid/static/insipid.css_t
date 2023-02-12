@@ -259,12 +259,13 @@ section, .section {
 
 a {
     color: #1863b5;
-    text-decoration: none;
+    text-decoration-color: #ccc;
+    text-decoration-line: underline;
     overflow-wrap: break-word;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration-color: currentColor;
 }
 
 a:visited {
@@ -272,15 +273,11 @@ a:visited {
 }
 
 a.external {
-    text-decoration: underline;
+    text-decoration-color: currentColor;
 }
 
 a.external:hover {
-    text-decoration: none;
-}
-
-a.external:visited {
-    text-decoration: none;
+    text-decoration-line: none;
 }
 
 /* -- code formatting ------------------------------------------------------- */
@@ -897,6 +894,11 @@ div.sphinxsidebar ul ul {
 
 .sphinxsidebar a {
     color: #004188;
+    text-decoration: none;
+}
+
+.sphinxsidebar a:hover {
+    text-decoration-line: underline;
 }
 
 div.sphinxsidebar a.in-view {
