@@ -143,7 +143,7 @@
 {%- endif %}
           </div>
         </div>
-{%- if pagename != "search" and 'searchbox.html' not in sidebars %}
+{%- if pagename != "search" and 'searchbox.html' not in sidebars and 'searchfield.html' not in sidebars %}
         <div id="searchbox" role="search">
           <form id="search-form" class="search" style="display: none" action="{{ pathto('search') }}" method="get">
             <input type="search" name="q" placeholder="{{ _('Search') + ' ...' }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />

@@ -26,6 +26,6 @@ Search Box
 
 If you don't like the search button in the topbar,
 you can also put a search field into the sidebar
-by selecting the template ``searchbox.html``.
+by selecting the template ``searchbox.html`` or ``searchfield.html``.
 
 Like the search button, this is only available when JavaScript is enabled.

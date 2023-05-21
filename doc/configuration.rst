@@ -91,7 +91,7 @@ See below for `default values`_.
         .. note::
 
             This is only shown if :confval:`html_sidebars`
-            does *not* contain ``'searchbox.html'``.
+            does *not* contain ``'searchbox.html'`` or ``'searchfield.html'``.
 
     :gh-template:`fullscreen-button.html`
         A button to switch to fullscreen mode (and back again).
@@ -353,7 +353,8 @@ which are relevant for the ``insipid`` theme.
     :file:`globaltoc.html`,
     :file:`localtoc.html`,
     :file:`relations.html`,
-    :file:`searchbox.html` and
+    :file:`searchbox.html`,
+    :file:`searchfield.html` and
     :file:`sourcelink.html`.
 
     You can also select templates from the ``insipid`` theme:
