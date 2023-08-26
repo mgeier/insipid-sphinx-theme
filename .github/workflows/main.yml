@@ -21,9 +21,13 @@ jobs:
       run: |
         python --version
     - name: Install Python package
+      env:
+        PYTHONWARNINGS: error,default::DeprecationWarning
       run: |
         $PIP install .
     - name: Install docs dependencies
+      env:
+        PYTHONWARNINGS: error,default::DeprecationWarning
       run: |
         $PIP install -r doc/requirements.txt
     - name: Build HTML
