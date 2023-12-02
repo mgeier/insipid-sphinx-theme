@@ -120,6 +120,9 @@ See below for `default values`_.
             if the repository containing your source files is
             hosted on Bitbucket or Github, respectively.
 
+            If you use a different hosting platform,
+            you can :ref:`override this template entirely <repo-button-html>`.
+
     :gh-template:`pdf-button.html`
         A link to the PDF version of your docs.
 
@@ -220,7 +223,7 @@ __ https://github.com/sphinx-doc/sphinx/blob/master/
 
 
 .. theme-option:: body_max_width
-    
+
     Maximal width of the main document text (in pixels or any CSS unit).
     Set it to ``None`` for unlimited width.
 

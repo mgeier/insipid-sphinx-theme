@@ -50,7 +50,35 @@ You can create arbitrary new files and add them to those lists.
 You can also extend (or completely replace) existing templates
 (:gh-template:`layout.html`, :gh-template:`page.html`,
 :gh-template:`footer.html` etc.).
-For example, you can extend the template :gh-template:`layout.html`
+
+For example, if Sphinx's :confval:`copyright` setting is not flexible enough
+(because it inserts a "copyright" symbol which may not be desired),
+one could create a customized note by replacing the existing template
+:gh-template:`copyright.html`:
+
+.. code-block:: html+jinja
+    :name: copyright-html
+    :caption: :file:`_templates/copyright.html`
+
+    Dedicated to the public domain with
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/"
+       class="reference external">CC0 1.0</a>.
+
+As another example,
+if you don't use Bitbucket/Gitlab/Github for hosting your project,
+you can overwrite the :gh-template:`repo-button.html` template
+to use a custom URL and icon:
+
+.. code-block:: html+jinja
+    :name: repo-button-html
+    :caption: :file:`_templates/repo-button.html`
+
+    <a href="https://example.org/user/repo/" title="My Hosting">
+      {% include 'icons/code-branch.svg' %}
+    </a>
+
+To give yet another example,
+you can also extend the template :gh-template:`layout.html`
 by creating your own file named :file:`layout.html`:
 
 .. code-block:: html+jinja
@@ -85,19 +113,6 @@ Otherwise, the contents are overwritten.
 If you don't use the ``extends`` tag,
 you can completely replace a given template.
 By leaving the file empty, you can disable a template.
-
-For example, if the setting :confval:`copyright` is not flexible enough
-(because it inserts a "copyright" symbol which may not be desired),
-one could create a customized note by replacing the existing template
-:gh-template:`copyright.html`:
-
-.. code-block:: html+jinja
-    :name: copyright-html
-    :caption: :file:`_templates/copyright.html`
-
-    Dedicated to the public domain with
-    <a href="https://creativecommons.org/publicdomain/zero/1.0/"
-       class="reference external">CC0 1.0</a>.
 
 For further information, see :ref:`sphinx:templating`.
 
