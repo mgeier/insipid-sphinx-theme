@@ -175,7 +175,7 @@ with a content similar to this:
 
     [theme]
     inherit = insipid
-    stylesheet = ???.css
+    stylesheet = base.css, insipid.css, ???.css
     sidebars = ???.html, ???.html, ???.html
     pygments_style = ???
 
@@ -197,36 +197,8 @@ if you insist on not deriving from any theme).
 You should also create a sub-directory named :file:`static`
 containing your main CSS file (and probably additional CSS files)
 and any custom JavaScript files you want to use.
-Write the name of your main CSS file to the ``stylesheet`` field in your
+Add the name of your main CSS file to the ``stylesheet`` field in your
 :file:`theme.conf`.
-Remove the ``stylesheet`` field if you don't want to use your own CSS file.
-
-By default, the CSS file :file:`insipid.css` will *not* be included,
-but :file:`basic.css` and :file:`insipid-sidebar-readthedocs.css`
-will be included.
-
-To include :file:`insipid.css`, add this to your :file:`layout.html` template:
-
-.. code-block:: html+jinja
-
-    {% extends "insipid/layout.html" %}
-
-    {% block css %}
-        <link rel="stylesheet" href="{{ pathto('_static/insipid.css', 1) }}" type="text/css" />
-    {{ super() }}
-    {% endblock %}
-
-Similarly, you can add further custom CSS files, if you want.
-
-.. note::
-
-    You *could* alternatively use  this in your CSS file:
-
-    .. code-block:: css
-
-        @import 'insipid.css';
-
-    But this will increase the load time of the HTML pages!
 
 If you want to use custom JavaScript files,
 store them in the :file:`static` sub-directory of your theme directory
