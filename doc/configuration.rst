@@ -219,7 +219,7 @@ The following settings are inherited from the basic__ theme
 but for some of the options, the `default values`_ have been changed.
 
 __ https://github.com/sphinx-doc/sphinx/blob/master/
-    sphinx/themes/basic/theme.conf
+    sphinx/themes/basic/theme.toml
 
 
 .. theme-option:: body_max_width

@@ -24,7 +24,7 @@ there are showcases
 at https://sphinx-themes.org/.
 
 __ https://docutils.sourceforge.io/docs/user/rst/demo.html
-__ https://repo.or.cz/docutils.git/blob/master:/docutils/docs/user/rst/demo.txt
+__ https://repo.or.cz/docutils.git/blob/HEAD:/docutils/docs/user/rst/demo.rst
 
 Furthermore, several Sphinx themes have showcases in their documentation:
 
