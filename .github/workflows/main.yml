@@ -41,7 +41,7 @@ jobs:
         path: /tmp/sphinx-err-*.log
     - name: Check links
       run: |
-        $SPHINX -d _build/doctrees/ doc/ _build/linkcheck/ -b linkcheck
+        $SPHINX -d _build/doctrees/ doc/ _build/linkcheck/ -b linkcheck -q
     - name: Upload linkcheck results
       uses: actions/upload-artifact@v4
       if: ${{ success() || failure() }}
