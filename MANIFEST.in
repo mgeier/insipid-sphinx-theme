@@ -1,0 +1,3 @@
+# Symbolic links are not supported by setuptools-scm,
+# see https://github.com/pypa/setuptools-scm/issues/1092
+include src/insipid_sphinx_theme/insipid/icons/*.svg
