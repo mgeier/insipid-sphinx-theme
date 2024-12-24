@@ -262,16 +262,10 @@
     }
 {%- endif %}
 
-{%- if READTHEDOCS|tobool %}
-    const bottom_space = 42;
-{%- else %}
-    const bottom_space = 0;
-{%- endif %}
-
     if (current.length) {
         const top = current[0].getBoundingClientRect().top;
         const bottom = current[current.length - 1].getBoundingClientRect().bottom;
-        if (top < topbar.offsetHeight || bottom > (sidebar.offsetHeight - bottom_space)) {
+        if (top < topbar.offsetHeight || bottom > sidebar.offsetHeight) {
             current[0].scrollIntoView(true);
         }
     }
@@ -328,19 +322,6 @@
         });
 {%- endif %}
     });
-
-{%- if READTHEDOCS|tobool %}
-    const rtd_current_version = document.getElementById('duplicated-readthedocs-versions');
-    const rtd_other_versions = document.getElementById('readthedocs-embed-flyout');
-    const sidebarwrapper = document.querySelector('.sphinxsidebarwrapper');
-    rtd_current_version.addEventListener('click', event => {
-        if (sidebar.scrollTop + 1 > rtd_other_versions.offsetTop || sidebar.scrollTop + 1 > sidebar.scrollHeight - sidebar.offsetHeight) {
-            sidebar.scroll({top: 0, behavior:'smooth'});
-        } else {
-            sidebar.scroll({top: rtd_other_versions.offsetTop, behavior:'smooth'});
-        }
-    });
-{%- endif %}
 });
 
 {#

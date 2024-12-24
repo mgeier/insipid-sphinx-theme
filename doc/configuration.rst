@@ -15,15 +15,14 @@ from the default ¶ to something more meaningful like # or § or maybe 🔗:
 
     html_permalinks_icon = '#'
 
-And if you happen to host your documentation on https://readthedocs.org/
-and your sources on Bitbucket, Github or GitLab, you should set:
+If the sources of your documentation are hosted publicly, you should set:
 
 .. code-block:: python
 
     html_copy_source = False
 
-This way, you will get automatic source links in the page footer.
-See :confval:`html_show_sourcelink` for details.
+... and follow the instructions at :confval:`html_show_sourcelink`
+to get automatic source links in the page footer.
 
 
 Theme Settings
@@ -103,42 +102,34 @@ See below for `default values`_.
     :gh-template:`repo-button.html`
         A Bitbucket/Gitlab/Github logo linking to the associated repository.
 
-        .. note::
+        For this to work, you'll have to provide some information
+        in your ``conf.py`` via :confval:`html_context`::
 
-            If your docs are hosted on https://readthedocs.org/
-            this should work automagically.
-            If not, you'll have to provide some information
-            via :confval:`html_context`::
+            html_context = {
+                'display_gitlab': True,
+                'gitlab_user': 'myuser',
+                'gitlab_repo': 'myrepo',
+            }
 
-                html_context = {
-                    'display_gitlab': True,
-                    'gitlab_user': 'myuser',
-                    'gitlab_repo': 'myrepo',
-                }
+        Replace ``gitlab`` with ``bitbucket`` or ``github``
+        if the repository containing your source files is
+        hosted on Bitbucket or Github, respectively.
 
-            Replace ``gitlab`` with ``bitbucket`` or ``github``
-            if the repository containing your source files is
-            hosted on Bitbucket or Github, respectively.
-
-            If you use a different hosting platform,
-            you can :ref:`override this template entirely <repo-button-html>`.
+        If you use a different hosting platform,
+        you can :ref:`override this template entirely <repo-button-html>`.
 
     :gh-template:`pdf-button.html`
         A link to the PDF version of your docs.
 
-        .. note::
+        You'll have to make sure that a PDF version is built and uploaded
+        and you'll have to provide the URL to that PDF file
+        in your ``conf.py`` via :confval:`html_context`::
 
-            If your docs are hosted on https://readthedocs.org/
-            (and if you've enabled PDF builds)
-            this should work automagically.
-            If not, you'll have to provide the URL to the PDF file
-            via :confval:`html_context`::
-
-                html_context = {
-                    'downloads': [
-                        ('pdf', 'https://example.org/my-docs.pdf'),
-                    ],
-                }
+            html_context = {
+                'downloads': [
+                    ('pdf', 'https://example.org/my-docs.pdf'),
+                ],
+            }
 
     You can also create your own template file(s) located in your
     :confval:`templates_path`.
@@ -320,30 +311,28 @@ which are relevant for the ``insipid`` theme.
     However, when :confval:`html_copy_source` is ``False``,
     the ``insipid`` theme (via the :gh-template:`show-source.html` template)
     will show links to the appropriate version of the source files on
-    Bitbucket/Gitlab/Github.
+    Bitbucket/Gitlab/Github, if the following fields of :confval:`html_context`
+    are specified in your ``conf.py``::
 
-    .. note::
+        html_context = {
+            'display_gitlab': True,
+            'gitlab_user': 'myuser',
+            'gitlab_repo': 'myrepo',
+            'conf_py_path': '/path/to/doc/',
+            'commit': '123abc',
+        }
 
-        This should work automagically if your docs are hosted
-        on https://readthedocs.org/.
-        If not, you have to manually provide the necessary information
-        via :confval:`html_context`::
+    The example above shows settings for Gitlab.
+    Replace ``gitlab`` with ``bitbucket`` or ``github``
+    if the repository containing your source files is
+    hosted on Bitbucket or Github, respectively.
+    If the source files are hosted on a different service,
+    you can manually override the template :gh-template:`show-source.html`.
 
-            html_context = {
-                'display_gitlab': True,
-                'gitlab_user': 'myuser',
-                'gitlab_repo': 'myrepo',
-                'conf_py_path': '/path/to/doc/',
-                'commit': '123abc',
-            }
-
-        The example above shows settings for Gitlab.
-        Replace ``gitlab`` with ``bitbucket`` or ``github``
-        if the repository containing your source files is
-        hosted on Bitbucket or Github, respectively.
-
-        The ``commit`` value should contain the hash (or tag name)
-        of the commit which was used to create the docs.
+    The ``commit`` value should contain the hash (or tag name)
+    of the commit which was used to create the docs.
+    See this project's :file:`conf.py` for an example for
+    how to obtain the relevant hash automatically via Git.
 
 .. confval:: html_sidebars
 

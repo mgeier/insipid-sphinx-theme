@@ -4,7 +4,6 @@ Introduction
 This Sphinx_ theme was very much inspired by (i.o.w. ripped off of) mdBook_.
 
 Some further ideas were stolen from the Sphinx themes
-sphinx_typlog_theme_ (https://readthedocs.org/ badge),
 sphinx_material_ (previous/next arrows in relbar),
 sphinx_book_theme_ (fullscreen button),
 furo_ (sidebar that can be toggled without JavaScript),
@@ -191,18 +190,3 @@ translatable UI
     are translatable and
     they will be automatically replaced by their translations
     when a supported :confval:`language` setting is used.
-
-support for https://readthedocs.org/
-    The RTD "badge" (for selecting versions, languages etc.)
-    is incorporated into the bottom of the ``insipid`` sidebar
-    (instead of floating around in the bottom right corner of the page).
-
-    Furthermore, a link to the connected Bitbucket/Github/GitLab repository
-    is automatically displayed in the topbar.
-    This can be disabled by overriding :theme-option:`right_buttons`.
-
-    Finally, if :confval:`html_copy_source` is set to ``False``,
-    a "show source" link to the appropriate version of the page source
-    on Bitbucket/Github/GitLab is shown in the footer of each page.
-    The link can be disabled by setting
-    :confval:`html_show_sourcelink` to False.

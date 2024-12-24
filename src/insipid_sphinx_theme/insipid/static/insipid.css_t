@@ -73,32 +73,6 @@ div.sphinxsidebar {
     scrollbar-width: thin;
 }
 
-{%- if READTHEDOCS|tobool %}
-/* These settings are only relevant for pages without a sidebar: */
-body > .injected .rst-versions.shift-up {
-    max-height: calc(100vh - var(--topbar-height) - 50px);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: #ccc transparent;
-}
-
-body > .injected .rst-versions.shift-up .rst-current-version {
-    position: sticky;
-    top: 0;
-}
-
-body > .injected .rst-versions.shift-up::-webkit-scrollbar {
-    width: 7px;
-    background: transparent;
-}
-
-body > .injected .rst-versions.shift-up::-webkit-scrollbar-thumb {
-    border-radius: 3.5px;
-    background: #ccc;
-}
-{%- endif %}
-
 /* -- body styles ----------------------------------------------------------- */
 
 strong {
