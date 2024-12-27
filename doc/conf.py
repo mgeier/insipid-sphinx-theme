@@ -1,16 +1,29 @@
 # Configuration file for Sphinx,
 # see https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import os
+
 # -- Recommended settings -----------------------------------------------------
 
 html_theme = 'insipid'
 
 html_permalinks_icon = '#'
 
-# -- Recommended settings for readthedocs.org ---------------------------------
-
-# If False, source links to Bitbucket/Github/GitLab are shown
+# If False, source links to Bitbucket/Github/GitLab are shown (using html_context)
 html_copy_source = False
+
+# Update this with your own repo information:
+html_context = {
+    'display_github': True,
+    'github_user': 'mgeier',
+    'github_repo': 'insipid-sphinx-theme',
+    'conf_py_path': '/doc/',
+    'READTHEDOCS': os.environ.get('READTHEDOCS', False),
+    # The 'commit' field is overwritten below (with data from Git).
+    # If you prefer, you can also get it from your build environment,
+    # e.g. READTHEDOCS_GIT_COMMIT_HASH.
+    'commit': '???',
+}
 
 # -- Settings for source code -------------------------------------------------
 
@@ -144,8 +157,10 @@ sys.path.append(os.path.abspath('.'))
 
 try:
     from subprocess import check_output
-    release = check_output(['git', 'describe', '--tags', '--always'])
-    release = release.decode().strip()
+    release = check_output(
+        ['git', 'describe', '--tags', '--always']).decode().strip()
+    html_context['commit'] = check_output(
+        ['git', 'rev-parse', '--short', 'HEAD']).decode().strip()
 except Exception:
     release = '<unknown>'
 

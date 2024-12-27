@@ -41,13 +41,9 @@
 {% endif %}
 
 
-{% if (sidebars != []) and 'ethical-ad.html' not in sidebars %}
+{% if READTHEDOCS|tobool and (sidebars != []) and 'ethical-ad.html' not in sidebars %}
 {# Dummy assignment to be able to call append() #}
 {% set _dummy = sidebars.append('ethical-ad.html') %}
-{% endif %}
-{% if READTHEDOCS|tobool and (sidebars != []) and 'readthedocs-embed-flyout.html' not in sidebars %}
-{# Dummy assignment to be able to call append() #}
-{% set _dummy = sidebars.append('readthedocs-embed-flyout.html') %}
 {% endif %}
 
 
