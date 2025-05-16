@@ -13,5 +13,7 @@ python:
     - method: pip
       path: .
     - requirements: doc/requirements.txt
+sphinx:
+  configuration: doc/conf.py
 formats:
   - htmlzip
