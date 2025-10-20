@@ -7,10 +7,8 @@ Installation and Usage
 
 #.  Install the Python package ``insipid-sphinx-theme``, e.g. with pip_::
 
-        python3 -m pip install insipid-sphinx-theme
+        python -m pip install insipid-sphinx-theme
 
-    Depending on your Python installation,
-    you may have to use ``python`` instead of ``python3``.
     If you have installed the module already,
     you can use the ``--upgrade`` flag to get the newest release.
 
@@ -31,7 +29,7 @@ Installation and Usage
     or use :doc:`sphinx:man/sphinx-quickstart`) and add/edit the line:
 
     .. code-block:: python
- 
+
         html_theme = 'insipid'
 
 #.  Make sure your source files are
@@ -52,7 +50,7 @@ Installation and Usage
 
 #.  Run Sphinx, e.g. by using::
 
-        python3 -m sphinx <source-dir> <build-dir>
+        python -m sphinx <source-dir> <build-dir>
 
     ... where ``<source-dir>`` is the directory
     that contains your :file:`conf.py`,
@@ -60,7 +58,7 @@ Installation and Usage
     should be written to.
     For example, the full command could look something like this::
 
-        python3 -m sphinx doc html-files
+        python -m sphinx doc html-files
 
     For more options, see :doc:`sphinx:man/sphinx-build`.
 

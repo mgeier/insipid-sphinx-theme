@@ -29,7 +29,7 @@ jobs:
       env:
         PYTHONWARNINGS: error,default::DeprecationWarning
       run: |
-        $PIP install -r doc/requirements.txt
+        $PIP install --group doc
     - name: Build HTML
       run: |
         $SPHINX -d _build/doctrees/ doc/ _build/html/ -b html
