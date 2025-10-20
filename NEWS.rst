@@ -1,3 +1,10 @@
+Version 0.4.3 -- 2025-10-20 -- docs__ -- PyPI__ -- diff__
+ * Remove defunct readthedocs.org customizations
+
+__ https://insipid-sphinx-theme.readthedocs.io/en/0.4.3/
+__ https://pypi.org/project/insipid-sphinx-theme/0.4.3/
+__ https://github.com/mgeier/insipid-sphinx-theme/compare/0.4.2...0.4.3
+
 Version 0.4.2 -- 2023-08-27 -- docs__ -- PyPI__ -- diff__
  * Support for the new ``searchfield.html`` template
 
