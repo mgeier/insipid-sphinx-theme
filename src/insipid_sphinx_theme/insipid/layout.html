@@ -48,7 +48,6 @@
 
 
 {% block css %}
-    <link rel="stylesheet" href="{{ pathto('_static/basic.css', 1) }}" type="text/css" />
 {{- super() }}
 {%- if READTHEDOCS|tobool and render_sidebar %}
     <link rel="preload" href="{{ pathto('_static/insipid-sidebar-readthedocs.css', 1) }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
