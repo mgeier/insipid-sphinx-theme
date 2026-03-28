@@ -4,7 +4,7 @@ Basic Formatting
 Paragraphs
 ----------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#paragraphs
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis
@@ -34,7 +34,7 @@ After the line.
 Compound Paragraphs
 -------------------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#compound-paragraph
+https://www.docutils.org/docs/ref/rst/directives.html#compound-paragraph
 
 .. compound::
 
@@ -69,7 +69,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#compound-paragraph
 Line Blocks
 -----------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#line-blocks
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#line-blocks
 
 | Manual
 | line breaks.
@@ -78,7 +78,7 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#line-blocks
 Inline Markup
 -------------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#inline-markup
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#inline-markup
 
 Normal ``Inline Literal`` *Emphasis* **Strong Emphasis**.
 
@@ -94,7 +94,7 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlin
 Internal_ link, external_ link.
 
 .. _internal: `Inline Markup`_
-.. _external: https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
+.. _external: https://www.docutils.org/docs/ref/rst/restructuredtext.html
 
 Other page: :doc:`code-blocks`.
 
@@ -108,7 +108,7 @@ Footnotes
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#footnotes
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#footnotes
 
 Footnote [#numbered]_ and [*]_.
 And some more:
@@ -164,7 +164,7 @@ Citations
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#citations
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#citations
 
 Here is a citation reference: :title-reference:`The Title` [CIT2002]_.
 And another citation reference: [CIT2020]_.

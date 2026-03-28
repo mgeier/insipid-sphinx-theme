@@ -9,7 +9,7 @@ Literal Blocks
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#literal-blocks
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#literal-blocks
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#literal-blocks
 
 
 This is a code sample::
@@ -20,7 +20,7 @@ This is a code sample::
 Quoted Literal Blocks
 ---------------------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#quoted-literal-blocks
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#quoted-literal-blocks
 
 Supported initial characters:
 ``! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~``::
@@ -132,7 +132,7 @@ See also *[source]* link in :mod:`insipid_sphinx_theme`.
 ``parsed-literal`` Directive
 ----------------------------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#parsed-literal
+https://www.docutils.org/docs/ref/rst/directives.html#parsed-literal
 
 .. parsed-literal::
 
@@ -153,7 +153,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#parsed-literal
 Doctest Blocks
 --------------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#doctest-blocks
 
 >>> print('this is a Doctest block')
 this is a Doctest block

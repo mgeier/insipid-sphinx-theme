@@ -7,7 +7,7 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#tabl
 Grid Tables
 -----------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#grid-tables
 
 +------------------------+------------+----------+----------+
 | Header row, column 1   | Header 2   | Header 3 | Header 4 |
@@ -26,7 +26,7 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables
 Simple Tables
 -------------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#simple-tables
 
 =====  =====  =======
   A      B    A and B
@@ -86,7 +86,7 @@ col 1  col 2
 CSV Tables
 ----------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table
+https://www.docutils.org/docs/ref/rst/directives.html#csv-table
 
 .. csv-table:: Frozen ``Delights``!
    :header: "Treat", "Quantity", "Description"
@@ -101,7 +101,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table
 List Tables
 -----------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table
+https://www.docutils.org/docs/ref/rst/directives.html#list-table
 
 .. list-table:: Frozen ``Delights``!
    :widths: 15 10 30

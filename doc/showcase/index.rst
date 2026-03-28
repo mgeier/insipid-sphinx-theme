@@ -23,7 +23,7 @@ there are showcases
 -- rendered for many themes --
 at https://sphinx-themes.org/.
 
-__ https://docutils.sourceforge.io/docs/user/rst/demo.html
+__ https://www.docutils.org/docs/user/rst/demo.html
 __ https://repo.or.cz/docutils.git/blob/HEAD:/docutils/docs/user/rst/demo.rst
 
 Furthermore, several Sphinx themes have showcases in their documentation:

@@ -9,7 +9,7 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#lists-an
 Block Quotes
 ------------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#block-quotes
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#block-quotes
 
     A block quote may end with an attribution:
     a text block beginning with ``--``, ``---``, or a true em-dash,
@@ -86,7 +86,7 @@ definition term
 Epigraphs
 ---------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#epigraph
+https://www.docutils.org/docs/ref/rst/directives.html#epigraph
 
 .. epigraph::
 
@@ -99,7 +99,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#epigraph
 Highlights
 ----------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#highlights
+https://www.docutils.org/docs/ref/rst/directives.html#highlights
 
 .. highlights::
 
@@ -110,7 +110,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#highlights
 Pull-Quotes
 -----------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#pull-quote
+https://www.docutils.org/docs/ref/rst/directives.html#pull-quote
 
 .. pull-quote::
 

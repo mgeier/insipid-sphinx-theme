@@ -49,7 +49,7 @@ Text.
 Rubric
 ------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#rubric
+https://www.docutils.org/docs/ref/rst/directives.html#rubric
 
 Some text.
 
@@ -85,7 +85,7 @@ Some text.
 Table of Contents
 -----------------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#table-of-contents
+https://www.docutils.org/docs/ref/rst/directives.html#table-of-contents
 
 .. contents:: Table of Contents
     :backlinks: none

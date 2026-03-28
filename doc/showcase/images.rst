@@ -4,7 +4,7 @@ Images
 Image
 -----
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#image
+https://www.docutils.org/docs/ref/rst/directives.html#image
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#images
 
@@ -106,7 +106,7 @@ Scaled Image
 Figure
 ------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure
+https://www.docutils.org/docs/ref/rst/directives.html#figure
 
 A link (needs numfig_): :numref:`fig-insipid`.
 
@@ -163,7 +163,7 @@ Some more text.
     .. figure:: insipid.png
         :alt: Example image showing the text "insipid Sphinx theme"
         :align: right
-    
+
         This is the caption of the figure.
 
 .. topic:: Figure in topic
@@ -171,14 +171,14 @@ Some more text.
     .. figure:: insipid.png
         :alt: Example image showing the text "insipid Sphinx theme"
         :align: left
-    
+
         This is the caption of the figure.
 
 .. sidebar:: Figure in sidebar
 
     .. figure:: insipid.png
         :alt: Example image showing the text "insipid Sphinx theme"
-    
+
         This is the caption of the figure.
 
 ..
@@ -188,7 +188,7 @@ Some more text.
     .. figure:: insipid.png
         :alt: Example image showing the text "insipid Sphinx theme"
         :align: left
-    
+
         This is the caption of the figure.
 
 

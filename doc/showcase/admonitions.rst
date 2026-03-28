@@ -8,7 +8,7 @@ Admonitions
 Specific Admonitions
 --------------------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions
+https://www.docutils.org/docs/ref/rst/directives.html#specific-admonitions
 
 In many themes only ``note`` and ``warning`` are supported!
 
@@ -52,7 +52,7 @@ In many themes only ``note`` and ``warning`` are supported!
 Generic Admonitions
 -------------------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#generic-admonition
+https://www.docutils.org/docs/ref/rst/directives.html#generic-admonition
 
 .. admonition:: Admonition title with :doc:`a link <admonitions>` and ``code``
 
@@ -64,7 +64,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#generic-admonition
 Topic
 -----
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic
+https://www.docutils.org/docs/ref/rst/directives.html#topic
 
 .. topic:: Topic title with :doc:`a link <admonitions>` and ``code``
 
@@ -76,7 +76,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic
 Sidebar
 -------
 
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#sidebar
+https://www.docutils.org/docs/ref/rst/directives.html#sidebar
 
 .. sidebar:: Sidebar Title with :doc:`a link <admonitions>` and ``code``
     :subtitle: Sidebar Subtitle

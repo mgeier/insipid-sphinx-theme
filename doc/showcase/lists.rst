@@ -12,7 +12,7 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#lists-an
 Bullet Lists
 ------------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#bullet-lists
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#bullet-lists
 
 A single list item containing a single paragraph:
 
@@ -44,7 +44,7 @@ and/or a single nested list, each item containing ...
 * A paragraph.
 
 * Another paragraph.
-  
+
   - A second level paragraph.
 
   - A second level paragraph with significantly more text in it.
@@ -60,7 +60,7 @@ An example that doesn't fulfill this rule (only the nested sub-list does):
 * A paragraph.
 
 * Another paragraph.
-  
+
   - A second level paragraph
 
   - A second level paragraph
@@ -136,7 +136,7 @@ Definition term
 Enumerated Lists
 ----------------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#enumerated-lists
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#enumerated-lists
 
 1. Item 1 initial text.
 
@@ -251,7 +251,7 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#dire
 Definition Lists
 ----------------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#definition-lists
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#definition-lists
 
 term 1
     Definition 1.
@@ -351,7 +351,7 @@ Field Lists
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-field-lists
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#field-lists
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#field-lists
 
 :Date: 2001-08-16
 :Version: 1
@@ -380,7 +380,7 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#field-lists
 Option Lists
 ------------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#option-lists
+https://www.docutils.org/docs/ref/rst/restructuredtext.html#option-lists
 
 -a         Output all.
 -b         Output both (this description is
