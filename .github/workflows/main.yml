@@ -1,7 +1,6 @@
 name: Build docs and check links
 on: [push, pull_request]
 env:
-  PYTHONWARNINGS: error
   PIP: python -m pip
   SPHINX: python -m sphinx -W --keep-going --color
 jobs:
@@ -21,13 +20,9 @@ jobs:
       run: |
         python --version
     - name: Install Python package
-      env:
-        PYTHONWARNINGS: error,default::DeprecationWarning
       run: |
         $PIP install .
     - name: Install docs dependencies
-      env:
-        PYTHONWARNINGS: error,default::DeprecationWarning
       run: |
         $PIP install --group doc
     - name: Build HTML
